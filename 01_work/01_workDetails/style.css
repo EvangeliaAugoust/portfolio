@@ -466,3 +466,23 @@ footer{
     height: 530px; /* Καθορίζουμε ύψος για να μην είναι τεράστιο */
     max-width: 450px; /* Όριο στο μέγιστο πλάτος */
 }
+
+.hifi-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px; /* Μείωση του κενού για να χωράνε */
+    flex-wrap: nowrap; /* Αποτρέπει τα στοιχεία από το να πάνε από κάτω */
+    overflow-x: auto; /* Προσθήκη scroll αν είναι απαραίτητο */
+}
+
+.hifi-img {
+    width: 70%; /* Μικρότερη εικόνα */
+    max-width: 400px; /* Όριο στο μέγιστο μέγεθος */
+}
+
+.hifi-gif {
+    width: auto; /* Διατηρεί τις σωστές αναλογίες */
+    height: 530px; /* Καθορίζουμε ύψος για να μην είναι τεράστιο */
+    max-width: 450px; /* Όριο στο μέγιστο πλάτος */
+}

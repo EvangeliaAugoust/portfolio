@@ -84,22 +84,6 @@ function chat(){
 }
 chat()
 
-// credit to my sister <3
-joyce.style.display = "none";
-info.addEventListener("click", () => {
-    if (joyce.style.display == "none"){
-        joyce.style.animation = "in 1s forwards"
-        joyce.style.display = "block";
-        info.style.animation = "in 1s forwards"
-    }else{
-        joyce.style.animation = "jout 1s forwards"
-        info.style.animation = "out 1s ease"
-        setTimeout(() => {
-            joyce.style.display = "none";
-        }, 1000)
-    }
-})
-
 // --- INTRO TEXT Animation (χωρίς επανάληψη, ξεκινάει με το load) --- 
 const introPart1 = "Hi! 👋"; // Το πρώτο κομμάτι που περιλαμβάνει το "Hi! 👋"
 const introText = " I'm an aspiring UX/UI Designer, graduated in Computer Science, with a burning passion for creating intuitive user-friendly and equitable designs✨"; // Το υπόλοιπο κείμενο

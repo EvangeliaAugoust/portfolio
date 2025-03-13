@@ -1,0 +1,512 @@
+html{
+    scroll-behavior: smooth;
+}
+*{
+    font-family: 'Work Sans', sans-serif;
+    transition: .3s ease;
+}
+body{
+    overflow-x: hidden;
+    font-weight: 400;
+    margin: 0;
+    background-color: aliceblue;
+}
+a, li{
+    all: unset;
+    cursor: pointer;
+}
+::selection {
+    color: white;
+    background: #C33948;
+}
+
+/*NAVBAR*/
+nav{
+    top: 0;
+    width: 100%;
+    height: 10vh;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    background-color: #c33949fa;
+    color: white;
+}
+#me_index{
+    filter: brightness(0) saturate(100%) invert(100%) sepia(9%) saturate(7498%) hue-rotate(180deg) brightness(104%) contrast(116%);
+    margin-left: 30px;
+}
+#me_index:hover, .web a:hover{
+    letter-spacing: 0.5px;
+}
+.web{
+    display: flex;
+    width: 500px;
+    justify-content: space-evenly;
+}
+.web a{
+    padding: 2%;
+    border-bottom: white solid 2px;
+    transition: .3s ease;
+    border-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)) 1;
+}
+.web a:hover, #active, .web:hover #active:hover{
+    border-image: linear-gradient(to right, rgba(255, 255, 255, 0), white, rgba(255, 255, 255, 0)) 1;
+}
+.web:hover #active{
+    border-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)) 1;
+}
+.mob{
+    display: none;
+}
+.mobNav{
+    position: absolute;
+    width: 100%;
+    height: 40vh;
+    left: 0;
+    padding: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    font-size: 1.5rem;
+    z-index: -1;
+    padding-top: 200px;
+    display: none;
+    background-color: #C33948;
+}
+.mobNav a{
+    width: 30vh;
+    padding: 2%;
+    border: solid 2px;
+    transition: .3s ease;
+    background-color: white;
+    border-radius: 12px;
+}
+
+/* nav animations */
+@keyframes expand{
+    from {}
+    to {transform: translateY(-200px)}
+}
+@keyframes close{
+    from {transform: translateY(-200px)}
+    to {transform: translateY(-700px)}
+}
+/* nav responsive */
+@media screen and (max-width:858px){
+    .web{
+        justify-content: end;
+    }
+    .web a{
+        display: none;
+    }
+    .mob{
+        display: block;
+        margin: 3%;
+    }
+    #mobIcon{
+        filter: brightness(0) saturate(100%) invert(100%) sepia(9%) saturate(7498%) hue-rotate(180deg) brightness(104%) contrast(116%);
+        cursor: pointer;
+    }
+    .mobNav{
+        display: flex;
+        transform: translateY(-710px);
+        color: black;
+    }
+    .mobNav:hover #mobActive{
+        background-color:white;
+        color: black;
+    }
+    .mobNav a:hover, #mobActive, .mobNav:hover #mobActive:hover{
+        background-color:black;
+        border-color: black;
+        color: white;
+    }
+    #me_index:hover, .web a:hover{
+        letter-spacing: 0px;
+    }
+}
+/* NAVBAR */
+
+/* heroImg */
+.heroImg{
+    height: fit-content;
+    margin-top: 5vh;
+    padding: 10%;
+    padding-bottom: 5%;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#mobileHero{
+    background-image: url("../../00_assets/projects/cases/heroImage/mobiletest2.png");
+}
+#stellarHero{
+    background-image: url("../../00_assets/projects/cases/heroImage/stellar.svg");
+}
+#thaHero{
+    background-image: url("../../00_assets/projects/cases/heroImage/tha.svg");
+}
+#complHero{
+    background-image: url("../../00_assets/projects/cases/heroImage/compl.svg")
+}
+#csTitle{
+    font-size: 4em;
+    font-family: "Marcellus SC", serif;
+}
+
+/* process */
+ul {
+    all: unset;
+}
+
+.process {
+    z-index: 98;
+    position: fixed;
+    bottom: 35vh; /* λίγο πιο πάνω */
+    right: 2%; /* πιο κοντά στην άκρη */
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff00;
+    padding: 0.8%; /* ελαφρώς μεγαλύτερο padding */
+    color: rgba(0, 0, 0, 0.5); /* ελαφρώς πιο σκούρο */
+    border-radius: 5px;
+    transition: .3s ease;
+    font-size: 0.9rem; /* λίγο μεγαλύτερο από πριν */
+}
+
+.process:hover {
+    background-color: aliceblue;
+}
+
+.goTo, #top {
+    transition: .1s ease;
+    font-size: 0.9rem; /* ταιριάζει με το process */
+}
+
+.goTo {
+    margin-bottom: 7%; /* λίγο περισσότερο κενό ανάμεσα στις επιλογές */
+}
+
+.goTo:hover, #top:hover {
+    color: #C33948;
+}
+
+/* show n tell*/
+.stage{
+    text-align: center;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+.label, .desc{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.label{
+    font-weight: 300;
+    font-size: 4em;
+}
+.subhead{
+    color:rgba(0, 0, 0, 0.336);
+    font-weight: 600;
+}
+
+.desc{
+    padding-left: 20vw;
+    padding-right: 20vw;
+    text-align: left;
+}
+.desc p{
+    line-height: 200%;
+}
+
+.quotes p{
+    border-left: solid rgba(0, 0, 0, 0.336);
+    padding-left: 20px;
+}
+
+.viewing{
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    bottom: 0;
+    left: 0;
+    background-color: #1d1d1dab;
+    z-index: 101;
+    cursor: zoom-out;
+    display: flex;
+    justify-content: center;
+    display: none;
+}
+#zoom{
+    align-self: center;
+    width: 85vw;
+}
+
+.show{
+    width: 60vw;
+    cursor: zoom-in;
+    transition: .3s ease;
+}
+.show:hover{
+    transform: scale(101%);
+}
+.mshow{
+    display: flex;
+    justify-content: space-evenly;
+}
+.subshow{
+    width: 50%;
+}
+.trishow{
+    width: 35%;
+}
+.gifshow{
+    width: 20%;
+    border-radius: 20px;
+}
+
+
+span.subhead{
+    text-align: left;
+}
+
+.more{
+    margin: 10%;
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+}
+.more p{
+    user-select: none;
+}
+.check, #checked{
+    transition: .3s ease;
+}
+.more:hover #checked{
+    color: black;
+}
+#checked, .check:hover, .more:hover #checked:hover{
+    color:#C33948;
+}
+
+.elink{
+    color:#0000EE;
+    transition: .3s ease;
+    cursor: pointer;
+}
+.elink:hover{
+    text-decoration: underline;
+}
+
+
+.space{
+    padding: 1%;
+}
+.set li{
+    all: unset;
+    display: flex;
+    flex-direction: column;    
+    cursor:auto;
+    line-height: 200%;
+}
+
+/* footer */
+footer{
+    background-color: #C33948;
+    color: white;
+    font-family: "Work Sans", "serif";
+    height: fit-content;
+    padding-top: 2%;
+    padding-left: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#foot img{
+    filter: brightness(0) saturate(100%) invert(100%) sepia(9%) saturate(7498%) hue-rotate(180deg) brightness(104%) contrast(116%);
+}
+#email{
+    margin-top: 0%;
+    font-weight: 200;
+}
+#cr{
+    text-align: right;
+    padding-right: 2%;
+    font-weight: 200;
+}
+#followUp{
+    font-size: 1.5em;
+    text-align: left;
+    font-weight: 300;
+}
+.follow{
+    cursor: pointer;
+    padding-top: 1%;
+    width: 20%;
+    display: flex;
+    justify-content: flex-start; /* Βάζει τα εικονίδια στην αρχή */
+    gap: 30px; /* Προσαρμόζει την απόσταση μεταξύ τους */
+}
+.follow a{
+    transition: .3s ease;
+}
+.follow a:hover{
+    transform: scale(110%);
+}
+.follow img{
+    width: 2em;
+}
+#up1{
+    animation: t1 5s infinite ease-in-out;
+} 
+#up2{
+    animation: t2 5s infinite ease-in-out;
+}
+#up3{
+    animation: t3 5s infinite ease-in-out;
+} 
+
+/* animations */
+@keyframes t1{
+    from {transform: translateY(0px);}
+    10% {transform: translateY(-5px);}
+    20% {transform: translateY(0px);}
+    30% {}
+    to {}
+}
+@keyframes t2{
+    from {}
+    10% {transform: translateY(0px);}
+    20% {transform: translateY(-5px);}
+    30% {transform: translateY(0px);}
+    to {}
+}
+@keyframes t3{
+    from {}
+    10% {}
+    20% {transform: translateY(0px);}
+    30% {transform: translateY(-5px);}
+    40% {transform: translateY(0px);}
+}
+@media screen and (max-width:858px){
+    #cr{
+        text-align: center;
+    }
+    .process{
+        right: 3%;
+    }
+    .show{
+        width: 80vw;
+    }
+    .mshow{
+        flex-direction: column;
+        align-items: center;
+    }
+    .gifshow{
+        width: 50%;
+        border-radius: 50px;
+    }
+    #zoom{
+        width:95vw;
+    }
+    .desc{
+        padding-left: 10vw;
+        padding-right: 10vw;
+    }
+    .label{
+        font-size: 2em;
+    }
+    .process{
+        display: none;
+    }
+    .more{
+        height: 30vh;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .more a{
+        text-align: center;
+    }
+    .more p{
+        margin-top: 2%;
+        margin-bottom: 2%;
+        display: none;
+    }
+}
+@media screen and (max-width: 600px){
+    .follow{
+        width: 30%;
+    }
+
+}
+@media screen and (max-width: 425px){
+    #followUp{
+        margin-top: 5%;
+       
+    }
+    .follow{
+        width: 40%;
+    }
+
+}
+
+.lofi-container {
+    display: flex; /* Βάζει την εικόνα και το GIF δίπλα-δίπλα */
+    justify-content: center; /* Τα κεντράρει */
+    align-items: center; /* Τα ευθυγραμμίζει κάθετα */
+    gap: 50px; /* Διάστημα μεταξύ τους */
+    flex-wrap: wrap; /* Αν η οθόνη είναι μικρή, τα κάνει stack */
+}
+
+.lofi-img {
+    width: 50%; /* Μικρότερη εικόνα */
+    max-width: 350px; /* Όριο στο μέγιστο μέγεθος */
+}
+
+.lofi-gif {
+    width: auto; /* Διατηρεί τις σωστές αναλογίες */
+    height: 530px; /* Καθορίζουμε ύψος για να μην είναι τεράστιο */
+    max-width: 450px; /* Όριο στο μέγιστο πλάτος */
+}
+
+.hifi-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: nowrap;
+    overflow-x: auto; /* Επιτρέπει το σκρολάρισμα */
+    overflow-y: hidden; /* Αποτρέπει κάθετο σκρολάρισμα μέσα στην ίδια την container */
+    -ms-overflow-style: none; /* Αφαίρεση του scroll bar σε Internet Explorer */
+    scrollbar-width: none; /* Αφαίρεση του scroll bar σε Firefox */
+}
+
+.hifi-container::-webkit-scrollbar {
+    display: none; /* Αφαίρεση του scroll bar σε Webkit browsers (Chrome, Safari, Edge) */
+}
+
+.hifi-gif {
+    width: auto;
+    height: 530px;
+    max-width: 450px;
+}
+
+.hifi-img {
+    width: 70%; /* Μικρότερη εικόνα */
+    max-width: 400px; /* Όριο στο μέγιστο μέγεθος */
+}
+
+.storyboard-img {
+    width: 150vw; /* Μειώνουμε το μέγεθος σε σχέση με το πλάτος της οθόνης */
+    max-width: 800px; /* Όριο στο μέγιστο πλάτος */
+}
+
+.mshowstoryboard{
+    flex-direction: column;
+    align-items: left;
+}

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evangelia Augoust</title>
+    <link href="./ticwebsitestyle.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" type="image/x-icon" href="../../00_assets/svgs/icon.png">
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus+SC&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+
+    <nav>
+        <a href="../../index.html"><img draggable="false" src="../../00_assets/svgs/icon.png" id="me_index" width="55px"></a>
+        <div class="web">            
+            <a href="../../index.html">Work</a>
+            <a href="../../02_cases/index.html">About</a>
+            <a href="../../00_assets/me/Evangelia Avgoustopoulou UX Resume.pdf" target="_blank">Resumé</a>
+        </div>
+        <div class="mob">
+            <div id="mobIcon"><img src="../../00_assets/svgs/hmg.svg" width="60vh" height="60vh"></div>
+            <ul class="mobNav">
+                <a href="../../index.html"><li>Work</li></a>
+                <a href="../../02_cases/index.html"><li >About</li></a>
+                <a href="../00_assets/me/Evangelia Avgoustopoulou UX Resume.pdf" target="_blank"><li>Resumé</li></a>
+            </ul>
+        </div>
+    </nav>        
+
+    <span id="tp"></span>
+
+    <div class="viewing">
+        <img id="zoom" draggable="false" src="">
+    </div>
+
+    <ul class="process">
+        <a class="goTo" href="#ow"><li>Overview</li></a>
+        <a class="goTo" href="#rs"><li>Research</li></a>
+        <a class="goTo" href="#id"><li>Ideate</li></a>
+        <a class="goTo" href="#ia"><li>IA</li></a>
+        <a class="goTo" href="#pr"><li>Prototype</li></a>
+        <a class="goTo" href="#ut"><li>Testing</li></a>
+        <a class="goTo" href="#fp"><li>Final Product</li></a>
+        <a class="goTo" href="#rf"><li>Reflection</li></a>
+        <a id="top" href="#tp"><li >Back to Top</li></a>
+    </ul>
+
+    <div class="heroImg" id="mobileHero">
+        <small>Google UX Design Certificate Project 2</small>
+        <h1 id="csTitle">TicketFlix Website</h1>
+        <small class="subhead">Role</small>
+        <p id="role">UX Designer</p>      
+        <small class="subhead">Tool</small>
+        <p id="tool">Figma, Google Doc, Google Slide</p>  
+        <small class="subhead">Duration</small>  
+        <p id="duration">November 2024 to December 2024 - 3 Weeks</p>
+    </div>
+
+    <span id="ow"></span>
+    <div class="stage">
+        <div class="label">Overview</div>
+        <div class="desc">
+            <span class="subhead"><p>The Product</p></span>
+            <p>
+                TicketFlix is a web-based platform that allows users to browse movies, book tickets, and manage their cinema experiences 
+                from their desktop. Designed for an intuitive and structured browsing experience, the website makes it easy to explore movies, 
+                compare options, and complete bookings effortlessly.
+            </p>
+            <br/>
+            <br/>
+            <span class="subhead"><p>The Goal</p></span>
+            <p>
+                Enhancing the movie-booking experience with a user-friendly web platform optimized for desktop browsing. The website offers an 
+                efficient way to discover movies, select showtimes, and secure tickets while providing a clear and accessible interface.
+            </p>
+        </div>
+        <img class="show" draggable="false" src="../../00_assets/projects/cases/covers/ticwebsite.png" alt="">
+        <span id="rs"></span>
+    </div>
+
+    <div class="stage">
+        <div class="label">Research</div>
+        <div class="desc">
+            <span class="subhead"><p>Secondary Research</p></span>
+            <p>Through my secondary research, I focused on understanding whether a web-based ticketing system for booking movie tickets would 
+                be effective and how it compares to mobile applications. According to a published paper titled <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4841210" target="_blank" class="elink">'A Case Study on Online Ticket Booking System Project'</a> 
+                it was found that users often prefer a web-based system due to <b>its ease of use and comprehensive features,</b> such as detailed information on movie 
+                details, reviews, and other relevant movie details. This makes the booking process <b>more informative and straightforward,</b> as opposed to 
+                mobile apps, which some users find complicated and uncomfortable to navigate. In fact, the study suggests that while mobile apps are widely 
+                available, many users feel uneasy using them for ticket bookings, further emphasizing the preference for web-based platforms.
+            </p>
+        </div>
+        <span id="id"></span>
+    </div>
+
+    <div class="stage">
+        <div class="label">Ideating Solutions</div>
+        <div class="desc">
+            <span class="subhead"><p>How Might We's</p></span>
+            <p>By reading more papers like the previous one and turning them into opportunities for design through well-defined questions, I found it easier to create a wider variety of design solutions.</p>
+            <ol class="set">
+                <li>1. How might we improve the website’s information architecture to make the booking process more efficient and reduce the number of clicks needed for ticket purchases?</li>
+                <li>2. How might we design a more intuitive and accessible ticket selection and payment flow for users of all technical backgrounds?</li>
+                <li>3. How might we ensure that users can easily find and compare available movies, showtimes, and theater options within the website?</li>
+            </ol>
+        </div>
+        <span id="ia"></span>
+    </div>
+
+    <div class="stage">
+        <div class="label">Informational Architecture</div>
+        <div class="desc">
+            <span class="subhead"><p>Sitemap</p></span>
+            <p>The sitemap I created structured and categorized the main pages and features that will be available to the user. 
+                I wanted the process to be as simple as possible and naturally guide the user to reach their destination with ease. 
+                Thus, adding to their user experience and keeping them on their happy path.</p>
+            <img class="show zoomable" draggable="false" src="../../00_assets/projects/cases/evidence/ticwebsite/sitemap.png" alt="">
+            <br/>
+            <br/>
+            <span class="subhead"><p>User Flows</p></span>
+            <p> I created three user flows that highlight the key functionalities the TicketFlix website offers to its users.</p>
+            <ol class="set">
+                <li>1. Booking a movie ticket through the selection and checkout process.</li>
+                <li>2. Managing bookings by canceling or rating past movies.</li>
+                <li>3. Updating account settings, adding coupons, and removing saved cards.</li>
+            </ol>
+            <img class="show zoomable" draggable="false" src="../../00_assets/projects/cases/evidence/ticwebsite/user flow.png" alt="">
+        </div>
+        <span id="pr"></span>
+    </div>
+
+    <div class="stage">
+        <div class="label">Design and Prototype</div>
+        <div class="desc">
+            <span class="subhead"><p>Paper Wireframes</p></span>
+            <p>When ideating designs through paper wireframes I prioritized <b>quantity over quality</b>.</p>
+            <img class="show paper" draggable="false" src="../../00_assets/projects/cases/evidence/ticwebsite/pw.jpg" alt="">
+            <br/>
+            <br/>
+            <span class="subhead"><p>Wireframes and Low-Fidelity Prototype</p></span>
+            <p>Mainly going off of my paper wireframes I made some adjustments and refinements to it's digital equivalent.</p>
+            <div class="mshow">
+                <img class="show digital" draggable="false" src="../../00_assets/projects/cases/evidence/ticwebsite/Frame 1.png" alt="">
+            </div>
+            <div class="mshow">
+                <img class="show digital" draggable="false" src="../../00_assets/projects/cases/evidence/ticwebsite/Frame 2.png" alt="">
+            </div>              
+        </div>
+        <span id="ut"></span>
+    </div>
+
+    <div class="stage">
+        <div class="label">Usability Study and Iterations</div>
+        <div class="desc">
+            <span class="subhead">Usability Study</span>
+            <p>I developed a moderated interview script for the usability study and documented the key participant characteristics 
+                in a well-structured google doc. Additionally, I outlined essential factors that influenced the project, including KPIs and project goals. 
+                <br> You can view the full research study plans <a href="https://docs.google.com/document/d/14F7g9gXd_jA8Queresq4Uta47EPtRU_N/edit?usp=sharing&ouid=113364369869409171004&rtpof=true&sd=true" target="_blank" class="elink">here</a>.</p>
+            <ol class="set">
+                <li>The prompts I've tasked participating user with are: </li>
+                <li>1. From the homepage, use filters to select a cinema and view available film screenings.</li>
+                <li>2. Select the upcoming Sunday to see the available movie screenings using filters.</li>
+                <li>3. Navigate to the "Comedy" section, filter movies under 12 euros, and select "Mickey 17."</li>
+                <li>4. Book two tickets for March 14 at 9:00 PM.</li>
+                <li>5. Choose seats in row C.</li>
+                <li>6. Finally, confirm your order and complete the payment process, saving your payment card for future use.</li>
+            </ol>
+            <p>Based on participants' responses, I synthesized my findings into actionable insights and prioritized them based on their impact on the user flow.
+                <br/>
+                <ul class="set">
+                    <li><strong>P0 (Must Have)</strong></li>
+                    <ul>
+                        <li>&bullet; It would be helpful to include a set of frequently asked questions (FAQs) at the bottom of each page when the genre changes (e.g., homepage, Adventure section, Drama section, etc.).</li>
+                        <li>&bullet; When a user navigates to the movie details page, it would be beneficial to display a progress indicator at the top of the page, outlining the four steps to complete the booking: Tickets → Seats → Checkout → Confirmation.</li>
+                    </ul>
+                    <br/>
+                    <li><strong>P1 (Nice to Have)</strong></li>
+                    <ul>
+                        <li>&bullet; Adding a short description under the available movies on each genre-specific page (e.g., homepage, Adventure section, Drama section, etc.) would enhance the browsing experience.</li>
+                    </ul>
+                </ul>
+            </p>            
+            <br/>
+            <br/>
+            <span class="subhead"><p>Style Guide</p></span>
+            <p>After conducting the usability study and refining my digital wireframes, I focused on defining the visual identity of the website. This included 
+                selecting the appropriate typeface, colors, and UI components to ensure a cohesive and user-friendly experience. 
+            </p>
+            <p>The style guide I developed for the website maintains consistency with the TicketFlix brand while adapting to a larger screen experience. 
+                It features a clean and modern sans-serif typeface, a structured yet visually engaging layout, and intuitive UI elements designed for seamless navigation.
+            </p>
+            <img class="show paper" draggable="false" src="../../00_assets/projects/cases/evidence/ticwebsite/sg.png" alt="">
+
+            <br/>
+            <br/>
+            <span class="subhead"><p>Mockups and High-Fidelity Prototype</p></span>
+            <p>With these insights, I was ready to refine the visual details and bring the TicketFlix website to life. I focused on creating a modern and engaging interface 
+                that aligns with the brand’s identity while ensuring a seamless browsing and booking experience. The design incorporates a clean layout, a vibrant yet balanced color palette, and intuitive navigation to enhance user interaction and accessibility.
+            </p>
+            <img class="show hd" draggable="false" src="../../00_assets/projects/cases/evidence/ticwebsite/hd.png" alt="">
+            <br/>
+            <br/>
+            <img class="show hp" draggable="false" src="../../00_assets/projects/cases/evidence/ticwebsite/hp.png" alt="">
+            <!--
+            <div class="mshow">
+                <img class="show subshow" draggable="false" src="../../00_assets/projects/cases/evidence/ticwebsite/hd1.png" alt="">
+                <span class="space"></span>
+                <img class="show subshow" draggable="false" src="../../00_assets/projects/cases/evidence/ticwebsite/hd2.png" alt="">
+            </div>
+            -->
+            
+            <!--
+            <span class="subhead"><p>Usability Study - Round 2 Findings</p></span>
+            <p>I synthesized newly collected data into actionable insights:</p>
+            <ol class="set">
+                <li>1. P0 (Must Have) - Accessibility issues with Luminosity Contrast Ratio.</li>
+                <li>2. P1 (Nice to Have) - More incentives (like a points system with rewards) to encourage more visitation in exhibitions.</li>
+                <li>3. P2 (Ok Not to Have) - More consistent interaction animations.</li>
+            </ol>
+
+            <br/>
+            <span class="subhead"><p>IA Revisions</p></span>
+            <p>In light of my new findings I went back to revise my sitemap and added a user flow to reflect the new revisions.</p>
+            <img class="show" draggable="false" src="../../00_assets/projects/cases/evidence/compl/sm2.png" alt="">
+            <img class="show" draggable="false" src="../../00_assets/projects/cases/evidence/compl/uf2.png" alt="">
+            -->
+
+        </div>
+        <span id="fp"></span>
+    </div>
+
+    <div class="stage">
+        <div class="label">Final Product</div>
+        <div class="desc">
+            <p>The final product of this project is a clickable high-fidelity prototype hosted through Figma's prototype feature.</p>
+        </div>
+        <img class="show gif" draggable="false" src="../../00_assets/projects/cases/evidence/ticwebsite/hifi.gif" alt="">
+        <small class="caption"><p>Demo clickable prototype <a href="https://www.figma.com/proto/MlGcHI9gdVEKaTcLhT5Jrp/TicketFlix-Responsive-Website?node-id=5143-13480&t=XOqvmwecJTR0fRRm-8&scaling=scale-down-width&content-scaling=fixed&page-id=5143%3A6313&starting-point-node-id=5143%3A13480&hide-ui=1" target="_blank" class="elink">here</a>.</p></small>
+        <span id="rf"></span>
+    </div>
+
+    <div class="stage">
+        <div class="label">Reflecting Back</div>
+        <div class="desc">
+            <p>The TicketFlix website extends the platform’s accessibility, allowing users to book movie tickets effortlessly from any device. By focusing on an 
+                intuitive layout and seamless navigation, it enhances the online booking experience and provides an alternative to mobile apps for those who prefer browsing on a larger screen.
+                <br/>
+                <br/>
+                Throughout this project, I deepened my understanding of designing for different platforms and the importance of adapting user flows based on user preferences. This experience 
+                reinforced the significance of usability testing and iterative design in crafting an efficient and enjoyable digital experience. Moving forward, further refinements based on 
+                additional user feedback could further enhance the website’s functionality and accessibility.
+            </p>
+        </div>
+    </div>
+
+    <!--
+    <div class="more">
+        <a href="./compl.html" class="check">TicketFlix Mobile App</a>
+        <p>&bull;</p>
+        <a href="" class="check" id="checked">TicketFlix Responsive Website</a>
+    </div>
+    -->
+
+    <footer>
+        <p id="followUp"></p>
+        <p id="email">Reach me <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=evaugoust@gmail.com" target="_blank">@evaugoust@gmail.com</a></p>
+        <div class="follow">
+            <a href="https://www.behance.net/evangeliaa" target="_blank"><img src="../../00_assets/svgs/behance.png" id="up1" alt="connect with me at behance"></a>
+            <a href="https://www.linkedin.com/in/evangelia-augoust-928a2426a/" target="_blank"><img src="../../00_assets/svgs/lk.png" id="up2" alt="connect with me at linkedin"></a>
+        </div>
+        <br/>
+        <small id="cr">&copy; 2025. All rights reserved to Evangelia Avgoustopoulou</small>
+    </footer>
+    <script src="./ticwebsitescript.js"></script>
+</body>
+</html>

@@ -184,7 +184,7 @@ ul {
 
 .goTo, #top {
     transition: .1s ease;
-    font-size: 0.9rem; /* ταιριάζει με το process */
+    font-size: 1.0rem; /* ταιριάζει με το process */
 }
 
 .goTo {
@@ -246,20 +246,12 @@ ul {
     width: 85vw;
 }
 
-.show{
-    width: 60vw;
-    cursor: zoom-in;
-    transition: .3s ease;
-}
 .show:hover{
     transform: scale(101%);
 }
 .mshow{
     display: flex;
     justify-content: space-evenly;
-}
-.subshow{
-    width: 50%;
 }
 .trishow{
     width: 35%;
@@ -268,12 +260,9 @@ ul {
     width: 20%;
     border-radius: 20px;
 }
-
-
 span.subhead{
     text-align: left;
 }
-
 .more{
     margin: 10%;
     display: flex;
@@ -301,7 +290,6 @@ span.subhead{
 .elink:hover{
     text-decoration: underline;
 }
-
 
 .space{
     padding: 1%;
@@ -455,17 +443,41 @@ footer{
 
 }
 
+.quote-container {
+    font-size: 23px; 
+    font-weight: 550; 
+    color: #C33948; 
+    line-height: 1.6 !important;
+    max-width: 700px; 
+    word-wrap: break-word;
+}
+
+.show{
+    width: 60vw;
+    cursor: zoom-in;
+    transition: .3s ease;
+}
+
+.subshow{
+    width: 50%;
+}
+
+.storyboard-img {
+    width: 100vw; /* Μειώνουμε το μέγεθος σε σχέση με το πλάτος της οθόνης */
+    max-width: 600px; /* Όριο στο μέγιστο πλάτος */
+}
+
+.lofi-img {
+    width: 50%; /* Μικρότερη εικόνα */
+    max-width: 350px; /* Όριο στο μέγιστο μέγεθος */
+}
+
 .lofi-container {
     display: flex; /* Βάζει την εικόνα και το GIF δίπλα-δίπλα */
     justify-content: center; /* Τα κεντράρει */
     align-items: center; /* Τα ευθυγραμμίζει κάθετα */
     gap: 50px; /* Διάστημα μεταξύ τους */
     flex-wrap: wrap; /* Αν η οθόνη είναι μικρή, τα κάνει stack */
-}
-
-.lofi-img {
-    width: 50%; /* Μικρότερη εικόνα */
-    max-width: 350px; /* Όριο στο μέγιστο μέγεθος */
 }
 
 .lofi-gif {
@@ -499,14 +511,4 @@ footer{
 .hifi-img {
     width: 70%; /* Μικρότερη εικόνα */
     max-width: 400px; /* Όριο στο μέγιστο μέγεθος */
-}
-
-.storyboard-img {
-    width: 150vw; /* Μειώνουμε το μέγεθος σε σχέση με το πλάτος της οθόνης */
-    max-width: 800px; /* Όριο στο μέγιστο πλάτος */
-}
-
-.mshowstoryboard{
-    flex-direction: column;
-    align-items: left;
 }

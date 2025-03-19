@@ -50,8 +50,8 @@ $('.show').click(function() {
     // Προεπιλεγμένες τιμές
     let width = "auto";
     let height = "auto";
-    let maxWidth = "85vw"; 
-    let maxHeight = "85vh"; 
+    let maxWidth = "100vw"; 
+    let maxHeight = "100vh"; 
     let borderRadius = "0px";
 
     // Έλεγχος με βάση τις κλάσεις της εικόνας
@@ -62,23 +62,22 @@ $('.show').click(function() {
         maxWidth = "70vw";  
     }
     if ($(this).hasClass("lofi-img")) {
-        maxHeight = "90vh";  
+        maxHeight = "100vh";  
     }
     if ($(this).hasClass("lofi-gif") || $(this).hasClass("hifi-gif")) {
-        maxWidth = "90vw";
-        maxHeight = "95vh";
+        maxWidth = "100vw";
+        maxHeight = "100vh";
         borderRadius = "25px";
     }
     if ($(this).hasClass("hifi-gif")) {
         borderRadius = "25px";
         maxWidth = "100vw";
-        maxHeight = "98vh";
+        maxHeight = "100vh";
     }
 
     // **ΝΕΟ: Ρύθμιση για τις συγκεκριμένες εικόνες χωρίς παραμόρφωση**
-    if (imgSrc.includes("digital 1") || imgSrc.includes("digital 2") || 
-        imgSrc.includes("hifiprototype1") || imgSrc.includes("hifiprototype2")) {
-        maxHeight = "95vh"; // Περιορίζουμε το ύψος χωρίς να αλλοιώνουμε την εικόνα
+    if (imgSrc.includes("hifiprototype1") || imgSrc.includes("hifiprototype2")) {
+        maxHeight = "100vh"; // Περιορίζουμε το ύψος χωρίς να αλλοιώνουμε την εικόνα
         maxWidth = "auto";  // Το αφήνουμε αυτόματο για να μην τραβιέται
     }
 

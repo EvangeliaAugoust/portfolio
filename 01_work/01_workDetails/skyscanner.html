@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evangelia Augoust</title>
+    <link href="./skyscannerstyle.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" type="image/x-icon" href="../../00_assets/svgs/icon.png">
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus+SC&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+
+    <nav>
+        <a href="../../index.html"><img draggable="false" src="../../00_assets/svgs/icon.png" id="me_index" width="55px"></a>
+        <div class="web">            
+            <a href="../../index.html">Work</a>
+            <a href="../../02_cases/index.html">About</a>
+            <a href="../../00_assets/me/Evangelia Avgoustopoulou UX Resume.pdf" target="_blank">Resumé</a>
+        </div>
+        <div class="mob">
+            <div id="mobIcon"><img src="../../00_assets/svgs/hmg.svg" width="60vh" height="60vh"></div>
+            <ul class="mobNav">
+                <a href="../../index.html"><li>Work</li></a>
+                <a href="../../02_cases/index.html"><li >About</li></a>
+                <a href="../00_assets/me/Evangelia Avgoustopoulou UX Resume.pdf" target="_blank"><li>Resumé</li></a>
+            </ul>
+        </div>
+    </nav>        
+
+    <span id="tp"></span>
+
+    <div class="viewing">
+        <img id="zoom" draggable="false" src="">
+    </div>
+
+    <ul class="process">
+        <a class="goTo" href="#ow"><li>Overview</li></a>
+        <a class="goTo" href="#rs"><li>Research</li></a>
+        <a class="goTo" href="#wr"><li>Wireframing</li></a>
+        <a class="goTo" href="#ui"><li>User Interface</li></a>
+        <a class="goTo" href="#fp"><li>Final Product</li></a>
+        <a class="goTo" href="#cn"><li>Conclusion</li></a>
+        <a id="top" href="#tp"><li >Back to Top</li></a>
+    </ul>
+
+    <div class="heroImg" id="mobileHero">
+        <h1 id="csTitle">Skyscanner App Redesign</h1>
+        <small class="subhead">Role</small>
+        <p id="role">UX/UI Designer<br>Content Strategist</p>    
+        <small class="subhead">Tool</small>
+        <p id="tool">Figma, Photopea, FFmpeg</p>  
+        <small class="subhead">Duration</small>  
+        <p id="duration">February 2025<br>2 Days</p>
+    </div>
+
+    <span id="ow"></span>
+    <div class="stage">
+        <div class="label">Overview</div>
+        <div class="desc">
+            <span class="subhead"><p>Preface</p></span>
+            <p>
+                Skyscanner is a popular flight search engine that allows users to find and compare airfare across multiple airlines. 
+                As someone who frequently uses this app for trip planning, I wanted to explore potential improvements in its <b>user 
+                experience and interface,</b> focusing on the journey from <b>the homepage to the flight details page.</b>
+            </p>
+            <p class="quote-container">
+                ❛❛ Skyscanner app is used by millions of user. To redesign something that is already have a existing user base is itself is a challenge.
+            </p>
+        </div>
+        <img class="show cv" draggable="false" src="../../00_assets/projects/cases/evidence/skyscanner/cover.png" alt="">
+        <span id="rs"></span>
+    </div>
+
+    <div class="stage">
+        <div class="label">Research</div>
+        <div class="desc">
+            <p>With limited time following a typical design process was a challenge. When it came to user research I could not do more. But I did talk to some 
+                friends and asked their existing experience of using Skyscanner app and their pain-points.
+            </p>
+            <p id="current-app-issues">
+                I then began with careful observation of each screen, completing the desired task, going back and forward, taking notes on my initial thoughts
+                like what's missing and what can be done to make user experience more intuitive. My goal was to refine the <b>clarity, hierarchy, and efficiency
+                of the experience</b> while keeping familiar patterns intact.
+            </p>
+            <br/>
+            <span class="subhead"><p>Current App Issues & Initial Findings</p></span>            
+            <p>
+            <ul class="set">
+                <li><strong>Homepage</strong></li>
+                <ul>
+                    <li>&bullet; Lack of a clear Call-to-Action (CTA) for immediate flight searches.</li>
+                    <li>&bullet; Cluttered with oversized ads and extra cards, distracting from the main function.</li>
+                </ul>
+                <br/>
+                <li><strong>Explore Page</strong></li>
+                <ul>
+                    <li>&bullet; Unclear meaning of "Explore Everywhere", leaving users unsure about what they are viewing.</li>
+                </ul>
+                <br/>
+                <li><strong>Search Page</strong></li>
+                <ul>
+                    <li>&bullet; Dark UI – The search form (departure, destination, dates) is the only visible element, 
+                    while the rest of the screen remains completely black, making the interface feel unbalanced.</li>
+                </ul>
+                <br/>
+                <li><strong>Flights Page</strong></li>
+                <ul>
+                    <li>&bullet; Filters are too broad, making it harder to refine searches.</li>
+                    <li>&bullet; Important flight details are missing.</li>
+                </ul>
+                <br/>
+                <li><strong>Details Page</strong></li>
+                <ul>
+                    <li>&bullet; No sorting or filtering for booking providers, making comparisons difficult.</li>
+                    <li>&bullet; Limited information about booking providers.</li>
+                </ul>
+            </ul>
+        </p>
+        <br/>
+        <span class="subhead"><p>UX Principles</p></span>
+        <p>Throughout the design process, I applied the key UX principles, particularly Fitts's Law and Hick’s Law, to enhance usability and efficiency.</p>
+        <img class="pr" draggable="false" src="../../00_assets/projects/cases/evidence/skyscanner/uxpr.png" alt="">
+        </div>
+        <span id="wr"></span>
+    </div>
+
+    <div class="stage">
+        <div class="label">Wireframing</div>
+        <div class="desc">
+        <p>I started by organizing <b>the app’s structure and layout,</b> focusing on improving usability and solving key issues. Beginning with rough sketches, 
+            I refined ideas to make the experience clearer, keeping familiar patterns for a smooth user experience.</p>
+        <span class="subhead"><p>Information Architecture</p></span>
+        <div class="mshow">
+            <img class="show subshow" draggable="false" src="../../00_assets/projects/cases/evidence/skyscanner/sitemap.png" alt="">
+            <span class="space"></span>
+            <img class="show subshow" draggable="false" src="../../00_assets/projects/cases/evidence/skyscanner/cm.png" alt="">
+        </div>
+        <small class="caption"><br/>(LEFT) Sitemap  &bullet; (RIGHT) Concept Model </small>
+        <br/>
+        <br/>
+        <span class="subhead"><p>Paper Wireframes</p></span>
+        <img class="show paper" draggable="false" src="../../00_assets/projects/cases/evidence/skyscanner/paper.jpg" alt="">
+        <br/>
+        <br/>
+        <span class="subhead"><p>Digital Wireframes</span>
+        <br/>
+        <br/>
+        <img class="show digital" draggable="false" src="../../00_assets/projects/cases/evidence/skyscanner/dw.png" alt="">         
+        </div>
+        <span id="ui"></span>
+    </div>
+
+    <div class="stage">
+        <div class="label">User Interface</div>
+        <div class="desc">
+            <span class="subhead"><p>Key Improvements</p></span>
+            <p>Based on <a href="#current-app-issues">the current app issues</a> I identified and the insights I gathered from wireframing, <b>I made the following improvements:</b></p>
+            <ul class="set">
+                <li>&bullet; <strong>Clearer CTA & more efficient homepage</strong> – The design of the flight search form makes it more prominent on the homepage now, providing a more intuitive experience.</li>
+                <li>&bullet; <strong>The updated Explore area</strong> — "Explore Everywhere" has become "Great Flight Deals Worldwide" and contains a carousel, making offer browsing simpler.</li>
+                <li>&bullet; <strong>Improved filtering with flight details</strong> – Filters now include icons and starting prices. The filters also include a 'Non-stop only' option for improved usability. Every flight listing displays, as well, complete travel time for somewhat more apparent comparisons.</li>
+                <li>&bullet; <strong>Improved booking provider section</strong> – Added sorting as well as filtering options ("Best Reviews", "Cheapest"), along with supplementary details regarding each provider, like customer support availability and baggage policies.</li>
+            </ul>
+            <p>
+                In the current app, <i>as an example,</i> there was no clear Call-to-Action (CTA) for <strong>quick flight searches</strong> on the homepage. Users had to click the 'Flights' button 
+                just to access the search form. By <strong>placing the search directly on the homepage,</strong> I made the booking process faster and more intuitive.
+            </p>
+            <img class="show example" draggable="false" src="../../00_assets/projects/cases/evidence/skyscanner/example.png" alt="">
+        </div>
+        <div class="desc">
+            <span class="subhead"><p>Mockups</p></span>
+            <p>Final mockups showing the updated design after applying the key improvements.</p>
+            <img class="show digital" draggable="false" src="../../00_assets/projects/cases/evidence/skyscanner/mockups.png" alt=""> 
+        </div>
+        <span id="fp"></span>
+    </div>
+
+    <div class="stage">
+        <div class="label">Final Product</div>
+        <div class="desc">
+            <p>The final product of this project is <b>a clickable high-fidelity prototype</b> hosted through Figma's prototype feature.</p>
+        </div>
+        <div class="hifi-container">
+            <img class="show hifi-gif" draggable="false" src="../../00_assets/projects/cases/evidence/skyscanner/gif.gif" alt="">
+        </div>
+        <br/>
+        <small class="pcaption">Demo clickable prototype <a href="https://www.figma.com/proto/uZ0AR45kfJ0vHoCWLYKjIp/Skyscanner-Mobile-App---Redesign?node-id=5140-5734&t=0fDBlK4m3G3qDjev-0&scaling=scale-down&content-scaling=fixed&page-id=5140%3A3013&starting-point-node-id=5140%3A5734" target="_blank" class="elink">here</a>.</small>
+        <span id="cn"></span>
+    </div>
+
+    <div class="stage">
+        <div class="label">Conclusion</div>
+        <div class="desc">
+            <p>
+                Redesigning of the Skyscanner app refined key usability aspects, making flight searches and bookings more intuitive. 
+                The flight booking process was improved, and the experience became <strong>simpler and easier to use</strong>.
+            </p>
+            <p>
+                The project displayed the balance between the known and the new; it maintained function as it is along with growing ease of 
+                use by way of minor yet <strong>effective</strong> design edits.
+            </p>
+            
+            <p class="quote-container">
+                ❛❛ Superb design isn’t just about adding features—it’s about enhancing the experience and making every step feel seamless.
+            </p>
+        </div>
+    </div>
+
+    <div class="more">
+        <a href="./ticmobile.html" class="check">TicketFlix Mobile App 2024</a>
+        <p>&bull;</p>
+        <a href="./ticwebsite.html" class="check">TicketFlix Website 2024</a>
+        <p>&bull;</p>
+        <a href="" class="check" id="checked">Skyscanner App Redesign 2025</a>
+    </div>
+    
+    <footer>
+        <p id="followUp"></p>
+        <p id="email">Reach me <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=evaugoust@gmail.com" target="_blank">@evaugoust@gmail.com</a></p>
+        <div class="follow">
+            <a href="https://www.behance.net/evangeliaa" target="_blank"><img src="../../00_assets/svgs/behance.png" id="up1" alt="connect with me at behance"></a>
+            <a href="https://www.linkedin.com/in/evangelia-augoust-928a2426a/" target="_blank"><img src="../../00_assets/svgs/lk.png" id="up2" alt="connect with me at linkedin"></a>
+        </div>
+        <br/>
+        <small id="cr">&copy; 2025. All rights reserved to Evangelia Avgoustopoulou</small>
+    </footer>
+    <script src="./skyscannerscript.js"></script>
+</body>
+</html>

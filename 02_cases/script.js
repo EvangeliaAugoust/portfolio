@@ -163,39 +163,54 @@ document.querySelector('.projectLeft .projectImg').addEventListener('click', fun
 document.addEventListener("DOMContentLoaded", function () {
     const highlightElements = document.querySelectorAll(".highlight-animation");
     let currentIndex = 0;
+    let isAnimating = false;
+    let visibleIndexes = new Set();
 
-    function checkScroll() {
-        if (currentIndex >= highlightElements.length) return;
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            const index = Array.from(highlightElements).indexOf(entry.target);
+            
+            if (entry.isIntersecting) {
+                visibleIndexes.add(index);
+                if (!isAnimating && index === currentIndex) {
+                    startNextAnimation();
+                }
+            } else {
+                visibleIndexes.delete(index);
+            }
+        });
+    }, { threshold: 0.6 });
 
-        let rect = highlightElements[currentIndex].getBoundingClientRect();
-        let screenHeight = window.innerHeight;
+    highlightElements.forEach(el => observer.observe(el));
 
-        if (rect.top < screenHeight - 50) { // Όταν η φράση πλησιάζει στην οθόνη
-            let el = highlightElements[currentIndex];
-            let underline = el.querySelector(".underline-animation");
+    function startNextAnimation() {
+        if (currentIndex >= highlightElements.length || !visibleIndexes.has(currentIndex)) return;
+
+        isAnimating = true;
+        let el = highlightElements[currentIndex];
+        let underline = el.querySelector(".underline-animation");
+
+        el.classList.add("highlight-active");
+
+        setTimeout(() => {
+            el.classList.remove("highlight-active");
+            el.classList.add("highlight-hide");
 
             setTimeout(() => {
-                el.classList.add("highlight-active"); // Ενεργοποιεί το rectangle animation
+                if (underline) {
+                    underline.classList.add("underline-active");
+                }
+                currentIndex++;
+                isAnimating = false;
 
-                setTimeout(() => {
-                    el.classList.remove("highlight-active");
-                    el.classList.add("highlight-hide"); // Fade out το rectangle
-
-                    setTimeout(() => {
-                        if (underline) {
-                            underline.classList.add("underline-active"); // Ενεργοποιεί την υπογράμμιση
-                        }
-                        currentIndex++; // Μεταβαίνουμε στην επόμενη φράση μόνο αφού ολοκληρωθεί η προηγούμενη
-                        checkScroll(); // Ξανακαλεί τη συνάρτηση για το επόμενο στοιχείο
-                    }, 50); // Μικρή καθυστέρηση για ομαλή μετάβαση
-
-                }, 1500); // Χρόνος για το rectangle animation
-
-            }, currentIndex * 1100); // Καθυστερεί κάθε φράση με βάση τη σειρά της
-        }
+                // Αν υπάρχουν ήδη ορατές επόμενες προτάσεις, συνεχίζει αυτόματα
+                if (visibleIndexes.has(currentIndex)) {
+                    startNextAnimation();
+                }
+            }, 50);
+        }, 1500);
     }
-
-    window.addEventListener("scroll", checkScroll);
 });
+
 
 

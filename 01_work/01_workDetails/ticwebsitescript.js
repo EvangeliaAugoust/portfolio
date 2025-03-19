@@ -88,25 +88,20 @@ $('.show').click(function() {
     let maxHeight = "85vh"; 
     let borderRadius = "0px";
 
-    // Έλεγχος με βάση τις κλάσεις της εικόνας
-    if ($(this).hasClass("subshow")) {
-        maxWidth = "80vw";  
-    }
-
-    if ($(this).hasClass("gif")) {
-        maxWidth = "100vw";
-        maxHeight = "100vh";
-    }
-    
     // ΝΕΟ: Έλεγχος για την κλάση "zoomable"
     if ($(this).hasClass("zoomable")) {
         maxWidth = "100vw"; // Μπορείς να αλλάξεις τις τιμές για το zoom όταν η εικόνα έχει την κλάση zoomable
         maxHeight = "100vh";
-    }
+    }    
 
     if ($(this).hasClass("paper")) {
         maxWidth = "100vw"; // Μπορείς να αλλάξεις τις τιμές για το zoom όταν η εικόνα έχει την κλάση zoomable
         maxHeight = "100vh";
+    }
+
+    if ($(this).hasClass("digital")) {
+        maxWidth = "102vw";  // Αύξηση του πλάτους κατά το zoom
+        maxHeight = "128vh"; // Αύξηση του ύψους αλλά με περιορισμό
     }
 
     if ($(this).hasClass("hd")) {
@@ -119,11 +114,11 @@ $('.show').click(function() {
         maxHeight = "100vh";
     }
 
-    if ($(this).hasClass("digital")) {
-        maxWidth = "102vw";  // Αύξηση του πλάτους κατά το zoom
-        maxHeight = "128vh"; // Αύξηση του ύψους αλλά με περιορισμό
+    if ($(this).hasClass("gif")) {
+        maxWidth = "100vw";
+        maxHeight = "100vh";
     }
-
+    
     // Εφαρμογή των ρυθμίσεων
     zoomImg.css({
         "width": width,

@@ -184,7 +184,7 @@ ul {
 
 .goTo, #top {
     transition: .1s ease;
-    font-size: 0.9rem; /* ταιριάζει με το process */
+    font-size: 1.0rem; /* ταιριάζει με το process */
 }
 
 .goTo {
@@ -268,7 +268,6 @@ ul {
     width: 20%;
     border-radius: 20px;
 }
-
 
 span.subhead{
     text-align: left;
@@ -455,6 +454,15 @@ footer{
 
 }
 
+.quote-container {
+    font-size: 23px; 
+    font-weight: 550; 
+    color: #C33948; 
+    line-height: 1.6 !important;
+    max-width: 800px; 
+    word-wrap: break-word;
+}
+
 .hifi-container {
     display: flex;
     justify-content: center;
@@ -478,14 +486,14 @@ footer{
     max-height: 530px; /* Προαιρετικό όριο ύψους */
 }
 
-.digital {
-    max-width: 60vw;
+.paper {
+    max-width: 45vw;
     height: auto;
     cursor: pointer;
 }
 
-.paper {
-    max-width: 45vw;
+.digital {
+    max-width: 60vw;
     height: auto;
     cursor: pointer;
 }

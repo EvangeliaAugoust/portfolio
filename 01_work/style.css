@@ -140,21 +140,28 @@ nav{
     justify-content: center;
     align-items: center;
 }
-.whoDat{
+
+/*
+@keyframes swayBackground {
+    0% { background-position: 0% 0%; }
+    90% { background-position: 0.2% 0.2%; }
+    100% { background-position: 0% 0%; }
+}*/
+
+.whoDat {
     width: 50%;
     height: 100%;
     padding-left: 2%;
     padding-right: 2%;
-    background-image: url(../00_assets/svgs/wframe.svg);
+    background-image: url(../00_assets/svgs/10.svg);
     background-size: cover;
     background-repeat: no-repeat;
     transition: .3s ease;
     background-color: rgb(253, 231, 231);
+    animation: swayBackground 3s ease-in-out infinite;
+}
 
-}
-.whoDat:hover{
-    background-color: #ffe1e1;
-}
+
 .datWho{
     text-align: center;
 }
@@ -236,6 +243,11 @@ nav{
 }
 .caseCover:hover{
     transform: scale(102%);
+}
+.caseCover2 {
+    max-width: 45vw;
+    height: auto;
+    cursor: pointer;
 }
 .viewImage{
     position: absolute;

@@ -87,7 +87,7 @@ chat()
 
 // --- INTRO TEXT Animation (χωρίς επανάληψη, ξεκινάει με το load) --- 
 const introPart1 = "Hi! 👋"; // Το πρώτο κομμάτι που περιλαμβάνει το "Hi! 👋"
-const introText = " I’m an aspiring UX/UI Designer with a background in Computer Science, passionate about creating intuitive and user-friendly designs✨"; // Το υπόλοιπο κείμενο
+const introText = " I’m an aspiring UX/UI Designer with a background in Computer Science, passionate about creating intuitive, user-friendly and accessible designs designs✨"; // Το υπόλοιπο κείμενο
 
 let introElement = document.querySelector("#introText");
 let introLetter = 0;

@@ -85,53 +85,52 @@ function chat(){
 chat()
 
 
-// --- INTRO TEXT Animation (χωρίς επανάληψη, ξεκινάει με το load) --- 
-const introPart1 = "Hi! 👋"; // Το πρώτο κομμάτι που περιλαμβάνει το "Hi! 👋"
-const introText = " I’m an aspiring UX/UI Designer with a background in Computer Science, passionate about creating intuitive, user-friendly and accessible designs designs✨"; // Το υπόλοιπο κείμενο
+// --- INTRO TEXT Animation ---
+const introPart1 = "Hi! 👋"; 
+const introTextParts = [
+    " I’m an aspiring UX/UI Designer with a background in",
+    "Computer Science, passionate about creating intuitive,",
+    "user-friendly and accessible designs ✨"
+];
 
 let introElement = document.querySelector("#introText");
 let introLetter = 0;
 let introSpeed = 40;
+let partIndex = 0; // Για να ξέρουμε σε ποιο κομμάτι του κειμένου βρισκόμαστε
 
 // Εμφανίζουμε το πρώτο κομμάτι με το "Hi! 👋"
 introElement.innerHTML = "";
-introElement.style.visibility = "visible"; // Δείχνουμε το κείμενο μόλις ξεκινήσει το animation
+introElement.style.visibility = "visible";
 
-// Λειτουργία για το πρώτο μέρος του animation (μόνο το "Hi! 👋")
+// Πρώτο animation για "Hi!👋"
 function typeIntroPart1() {
     let interval = setInterval(() => {
-        if (introLetter < introPart1.length) { // Γράφουμε μόνο το "Hi! 👋"
+        if (introLetter < introPart1.length) { 
             introElement.innerHTML += introPart1[introLetter];
             introLetter++;
         } else {
-            clearInterval(interval); // Σταματάμε μόλις ολοκληρωθεί το "Hi! 👋"
-            introLetter = 0; // Επαναφέρουμε το introLetter για το επόμενο τμήμα
-            setTimeout(typeIntroPart2, 1000); // Περιμένουμε 1 δευτερόλεπτο και μετά ξεκινάμε το δεύτερο μέρος
+            clearInterval(interval);
+            introLetter = 0;
+            setTimeout(() => typeIntroPart2(partIndex), 1000); // Ξεκινάμε το επόμενο μέρος
         }
     }, introSpeed);
 }
 
-// Λειτουργία για το δεύτερο μέρος του animation (το υπόλοιπο κείμενο)
-function typeIntroPart2() {
+// Δεύτερο animation χωρίς καθυστέρηση ανάμεσα στις γραμμές
+function typeIntroPart2(index) {
+    if (index >= introTextParts.length) return; // Αν έχουν εμφανιστεί όλα τα μέρη, σταματάμε
+
+    let currentPart = introTextParts[index];
+    let partLetter = 0;
+
     let interval = setInterval(() => {
-        if (introLetter < introText.length) { 
-            let char = introText[introLetter];
-
-            // Προσθήκη αλλαγής γραμμής στα σωστά σημεία
-            if (introText.startsWith(" Science,", introLetter)) {
-                introElement.innerHTML += "<br>";
-            } 
-            if (introText.startsWith(" user-", introLetter)) {
-                introElement.innerHTML += "<br>";
-            }
-
-            introElement.innerHTML += char;
-            introLetter++;
-
-            // Αν φτάσουμε στο τέλος, σταματάμε το animation
-            if (introLetter === introText.length) {
-                clearInterval(interval);
-            }
+        if (partLetter < currentPart.length) { 
+            introElement.innerHTML += currentPart[partLetter];
+            partLetter++;
+        } else {
+            clearInterval(interval);
+            introElement.innerHTML += "<br>"; // Προσθέτουμε αλλαγή γραμμής ΜΟΝΟ στο τέλος κάθε φράσης
+            typeIntroPart2(index + 1); // Ξεκινάμε αμέσως το επόμενο μέρος χωρίς καθυστέρηση
         }
     }, introSpeed);
 }

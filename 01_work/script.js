@@ -16,12 +16,12 @@ function mobileExpand(){
     if(tick == false){
         mobNavbar.style.display = "flex"
         mobNavbar.style.animation = "expand 1s forwards";
-        mobIcon.innerHTML = "<img src=\"../00_assets/svgs/close.svg\" width=\"60vh\" height=\"60vh\">"
+        mobIcon.innerHTML = "<img src=\"./00_assets/svgs/close.svg\" width=\"60vh\" height=\"60vh\">"
         tick = true;
         clearTimeout(span);
     }else{
         mobNavbar.style.animation = "close 1s forwards";
-        mobIcon.innerHTML = "<img src=\"../00_assets/svgs/hmg.svg\" width=\"60vh\" height=\"60vh\">"
+        mobIcon.innerHTML = "<img src=\"./00_assets/svgs/hmg.svg\" width=\"60vh\" height=\"60vh\">"
         tick = false;
         span = setTimeout(() => {
             mobNavbar.style.display = "none";

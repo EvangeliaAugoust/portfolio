@@ -379,7 +379,7 @@ footer{
     }
     .whoDat{
         padding: 0px;
-        background-image: url(../00_assets/svgs/wframe.svg);
+        background-image: url(../00_assets/svgs/tablet.svg);
     }
     .whoImg{
         height: 100vh;
@@ -412,7 +412,7 @@ footer{
     }
     .whoDat{
         padding-top: 20%;
-        background-image: url(../00_assets/svgs/mframe.svg);
+        background-image: url(../00_assets/svgs/m3.svg);
         background-size: cover;
         height: 50vh;
     }

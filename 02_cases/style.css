@@ -499,4 +499,34 @@ footer{
     }
 }
 
+@media (max-width: 768px) {
+    /* Απενεργοποίηση υπογράμμισης animation */
+    .underline-animation::after {
+        display: none;
+    }
+
+    /* Απενεργοποίηση highlight animation */
+    .highlight-animation::before {
+        display: none;
+    }
+
+    /* Επαναφορά του χρώματος του κειμένου */
+    .highlight-animation span {
+        color: inherit;
+    }
+
+    /* Διόρθωση διάταξης για να μην "σπάει" το κείμενο */
+    .highlight-animation,
+    .underline-animation {
+        display: inline;
+    }
+
+    /* Προσθήκη στατικής υπογράμμισης */
+    .highlight-animation span,
+    .underline-animation {
+        text-decoration: underline;
+        text-decoration-color: #5f9eb0;
+        text-underline-offset: 3px;
+    }
+}
 

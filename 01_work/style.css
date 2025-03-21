@@ -368,7 +368,7 @@ footer{
 @media screen and (max-width:858px){
     .intro{
         flex-direction: column;
-        height: 138vh;
+        height: 137vh;
     }
     #jz{
         font-size: 2.6em;

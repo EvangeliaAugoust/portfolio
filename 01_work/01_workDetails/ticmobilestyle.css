@@ -537,8 +537,32 @@ footer{
         max-width: 100%;
         height: auto;
     }
+}
 
-    .space {
-        display: none; /* Αφαιρεί το κενό μεταξύ των GIF */
+/* Απόκρυψη/Εμφάνιση ανάλογα με το viewport */
+.mobile-caption {
+    display: none;
+    font-size: 16px;
+    color: #555;
+    text-align: center;
+    margin-top: 4px;
+    display: block;
+}
+
+@media screen and (min-width: 768px) {
+    .mobile-caption {
+        display: none;
+    }
+    .desktop-caption {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .mobile-caption {
+        display: block;
+    }
+    .desktop-caption {
+        display: none;
     }
 }

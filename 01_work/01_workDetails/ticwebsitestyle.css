@@ -513,3 +513,12 @@ footer{
 .caption {
     font-size: 16px; /* Μπορείς να αυξήσεις την τιμή αν το θες μεγαλύτερο */
 }
+
+/* for mobile */
+@media screen and (max-width: 768px) {
+    .show, .zoomable, .paper, .digital, .hd, .hp {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+}

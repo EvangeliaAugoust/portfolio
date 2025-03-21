@@ -5,6 +5,11 @@ html{
     font-family: 'Work Sans', sans-serif;
     transition: .3s ease;
 }
+/*for correct width on mobile*/
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
 body{
     overflow-x: hidden;
     font-weight: 400;
@@ -511,4 +516,29 @@ footer{
 .hifi-img {
     width: 70%; /* Μικρότερη εικόνα */
     max-width: 400px; /* Όριο στο μέγιστο μέγεθος */
+}
+
+/* for mobile */
+@media screen and (max-width: 768px) {
+    .show, .storyboard-img, .lofi-img, .hifi-img, .lofi-gif, .hifi-gif {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .hifi-container {
+        display: flex;
+        flex-direction: column; /* Στοιχίζει τις εικόνες κάθετα */
+        align-items: center; /* Κεντράρει τις εικόνες */
+    }
+    
+    .hifi-gif {
+        width: 100%;  /* Προσαρμόζεται στο πλάτος της οθόνης */
+        max-width: 100%;
+        height: auto;
+    }
+
+    .space {
+        display: none; /* Αφαιρεί το κενό μεταξύ των GIF */
+    }
 }

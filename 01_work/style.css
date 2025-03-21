@@ -399,6 +399,9 @@ footer{
     .case, .caseStudies h1{
         margin-bottom: 30%;
     }
+    #redRectangle {
+        display: none;
+    }
 }
 @media screen and (max-width: 600px){
     #meet{
@@ -416,6 +419,9 @@ footer{
         background-size: cover;
         height: 50vh;
     }
+    #redRectangle {
+        display: none;
+    }
 }
 @media screen and (max-width: 425px){
     .whoDat{
@@ -430,6 +436,9 @@ footer{
     }
     .follow{
         width: 40%;
+    }
+    #redRectangle {
+        display: none;
     }
 
 }

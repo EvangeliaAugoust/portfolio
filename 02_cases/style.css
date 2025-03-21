@@ -1,4 +1,11 @@
 /*PROJECT CONTENT*/
+
+/*for correct width on mobile*/
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 .pull{
     height:5vh;
     background-color: black;
@@ -46,6 +53,11 @@
     background-image: url(../00_assets/svgs/backabout.png);
     background-position: center 75%;
 
+}
+@media (max-width: 768px) { /* Προσαρμόζεις το όριο σύμφωνα με τις ανάγκες σου */
+    .projectLeft {
+        background-image: none !important;
+    }
 }
 .projectLeft, .projectRight{
     padding-top: 2%;

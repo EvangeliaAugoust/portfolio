@@ -1,3 +1,8 @@
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 html{
     scroll-behavior: smooth;
 }
@@ -565,4 +570,36 @@ a[href="#current-app-issues"] {
 
 .pcaption {
     font-size: 16px; /* Μπορείς να αυξήσεις την τιμή αν το θες μεγαλύτερο */
+}
+
+/* for mobile */
+@media screen and (max-width: 768px) {
+    .show, .subshow, .paper, .digital, .example, .pr {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+    .pr {
+        width: 120%;
+        max-width: 130%;
+        height: auto;
+    }
+}
+
+/* for mobile images to be center */
+@media screen and (max-width: 768px) { /* Εφαρμόζεται μόνο για κινητές συσκευές */
+    
+    .viewing {
+        display: none; /* Κρύβει το viewing αρχικά */
+        justify-content: center;
+        align-items: center; /* Κεντράρισμα στη μέση */
+    }
+
+    #zoom {
+        display: none;
+        margin: auto;
+        display: block;
+        max-width: 100vw;
+        max-height: 100vh;
+    }
 }

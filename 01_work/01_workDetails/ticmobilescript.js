@@ -75,10 +75,16 @@ $('.show').click(function() {
         maxHeight = "100vh";
     }
 
-    // **ΝΕΟ: Ρύθμιση για τις συγκεκριμένες εικόνες χωρίς παραμόρφωση**
     if (imgSrc.includes("hifiprototype1") || imgSrc.includes("hifiprototype2")) {
         maxHeight = "100vh"; // Περιορίζουμε το ύψος χωρίς να αλλοιώνουμε την εικόνα
         maxWidth = "auto";  // Το αφήνουμε αυτόματο για να μην τραβιέται
+    }
+
+    // **ΝΕΟ: Αν η οθόνη είναι μικρότερη από 768px (κινητό), αύξησε το zoom στα subshow & storyboard-img**
+    if (window.innerWidth <= 768) {
+        if ($(this).hasClass("subshow") || $(this).hasClass("storyboard-img")) {
+            maxWidth = "100vw"; // Κάνει το zoom μεγαλύτερο στο κινητό
+        }
     }
 
     // Εφαρμογή των ρυθμίσεων

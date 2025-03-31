@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="../00_assets/svgs/icon.png">
-    <title>Evangelia Augoust</title>
+    <title>About — Evangelia Augoust</title>
     <link href="style.css" rel="stylesheet" type="text/css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     
@@ -12,6 +12,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Marcellus+SC&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Preload and force-load background images early -->
+    <link rel="preload" as="image" href="../00_assets/me/avatar.png">
+    <link rel="preload" as="image" href="../00_assets/svgs/backabout.jpg">
+    <link rel="preload" as="image" href="../00_assets/svgs/plants.png">
+    <img src="../00_assets/me/avatar.png" style="display: none;" loading="eager">
+    <img src="../00_assets/svgs/backabout.jpg" style="display: none;" loading="eager">
+    <img src="../00_assets/svgs/plants.png" style="display: none;" loading="eager">
 </head>
 <body>
     <nav>
@@ -19,14 +26,14 @@
         <div class="web">          
             <a href="../index.html">Work</a>
             <a href="#" id="active">About</a>
-            <a href="../00_assets/me/Evangelia Avgoustopoulou UX Resume.pdf" target="_blank">Resumé</a>
+            <a href="../00_assets/me/Evangelia Avgoustopoulou UX Resume.pdf" target="_blank">Resume</a>
         </div>
         <div class="mob">
             <div id="mobIcon"><img src="../00_assets/svgs/hmg.svg" width="60vh" height="60vh"></div>
             <ul class="mobNav">
                 <a href="../index.html"><li>Work</li></a>
                 <a href="#" id="mobActive"><li>About</li></a>
-                <a href="../00_assets/me/Evangelia Avgoustopoulou UX Resume.pdf" target="_blank"><li>Resumé</li></a>
+                <a href="../00_assets/me/Evangelia Avgoustopoulou UX Resume.pdf" target="_blank"><li>Resume</li></a>
             </ul>
         </div>
     </nav>        
@@ -44,37 +51,43 @@
         
             <div class="projectLeft project">
                 <section class="projectView">
-                    <img draggable="false" class="projectImg" src="../00_assets/me/about.jpg" alt="Who I Am">
+                    <div class="imageGrid">
+                        <img draggable="false" class="gridImg" src="../00_assets/me/paper.jpg" alt="Photo 1">
+                        <img draggable="false" class="gridImg" src="../00_assets/me/3.png" alt="Photo 2">
+                        <img draggable="false" class="gridImg" src="../00_assets/me/after.jpg" alt="Photo 3">
+                        <img draggable="false" class="gridImg" src="../00_assets/me/lio.jpg" alt="Photo 4">
+                    </div>
                 </section>
+                <!-- for one picture I remove the class imageGrid and i put this section with projectImg 
+                <section class="projectView">
+                    <img draggable="false" class="projectImg" src="../00_assets/me/about.jpg" alt="Who I Am">
+                </section> -->                   
                 <section class="projectDetails">
                     <section class="subDetail">Creative, Passionate UX/UI Designer</section>
                     <section class="projectTitle" id="whoIAm"></section>
                     <section class="projectBrief">
                         <!-- το class underline-animation είναι για την υπογράμμιση των λέξεων, ενώ το highlight-animation είναι για την επισήμανση -->
-                        <p>Hello there! My name is Evangelia & 
-                            <span class="highlight-animation"> <span class="underline-animation">I'm an aspiring UX/UI Designer</span> </span> 
-                            currently based in Thessaloniki, Greece.
-                        </p>
-                    
-                        <p>I taught myself UX/UI design because I love creating digital stuff that looks great and is easy to use. 
-                            I've learned a lot by trying things out, experimenting with new ideas, and working on different projects. 
-                            I'm all about <span class="highlight-animation"><span class="underline-animation">making websites and apps that people enjoy using.</span></span> 
-                            I pay close attention to details and always try to come up with cool ideas.
-                        </p>
-                    
-                        <p>As a Computer Science graduate, I enjoy bridging the gap between technology and design, combining my technical expertise with a 
-                            strong sense of aesthetics to create beautiful, user-friendly products.
-                        </p>
-                        
-                        <p><span class="quote">❛❛</span> My ultimate goal is to design applications that are not only efficient 
-                            and scalable under the hood, but also <span class="highlight-animation"><span class="underline-animation"> deliver pixel-perfect user
-                            experiences that engage and delight. </span></span> <span class="quote">❜❜</span>
-                        </p>
-                        
+                        <p>Hello there! My name is Evangelia and I'm currently based in Thessaloniki, Greece.</p>
 
-                        <p>In my free time, you’ll find me exploring hidden spots in the city, capturing street photography, or getting 
-                            lost in indie music while working on creative and inspiring crafts with clay and other materials. A fun fact 
-                            about me: I’m a huge fan of cinematography and enjoy exploring the art behind filmmaking. ✨
+                        <p>
+                            <span class="space">
+                              I got into UX/UI design 
+                              <span class="highlight-animation">
+                                <span class="underline-animation">because I love turning ideas into digital experiences.</span>
+                              </span>
+                              I've learned a lot by trying things out, experimenting and working on different projects.
+                            </span>
+                        </p>                                                  
+                                                   
+                        <p>With a background in Computer Science, I’ve learned how tech and design can work together, 
+                            helping me create user experiences that are both functional and visually appealing.
+                        </p>
+                        
+                        <p><span class="quote">❛❛</span> <span class="highlight-animation"><span class="underline-animation">My goal is to design websites and applications that people enjoy using</span></span> by 
+                            creating intuitive and engaging solutions that improve their everyday lives. <span class="quote">❜❜</span> 
+                        </p>
+                        
+                        <p>In my free time, you’ll find me taking street photos or listening to indie music while getting creative with clay. 🚀
                         </p>
                     
                         <p>Let's make something awesome together!</p>
@@ -82,7 +95,7 @@
                         <p>
                             <div class="contact">
                                 <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=evaugoust@gmail.com" target="_blank">
-                                    <img src="/portfolio/00_assets/svgs/emailabout.png" id="up1" alt="reach me through email">
+                                    <img src="/test2/00_assets/svgs/emailabout.png" id="up1" alt="reach me through email">
                                     <span>Email</span>
                                 </a>
                             </div>
@@ -91,7 +104,7 @@
                         <p>
                             <div class="contact">
                                 <a href="https://www.linkedin.com/in/evangelia-augoust-928a2426a/" target="_blank">
-                                    <img src="/portfolio/00_assets/svgs/lkabout.png" id="up2" alt="connect with me at linkedin">
+                                    <img src="/test2/00_assets/svgs/lkabout.png" id="up2" alt="connect with me at linkedin">
                                     <span>LinkedIn</span>
                                 </a>
                             </div>
@@ -108,8 +121,8 @@
         <p id="followUp"></p>
         <p id="email">Reach me <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=evaugoust@gmail.com" target="_blank">@evaugoust@gmail.com</a></p>
         <div class="follow">
-            <a href="https://www.behance.net/evangeliaa" target="_blank"><img src="/portfolio/00_assets/svgs/behance.png" id="up1" alt="connect with me at behance"></a>
-            <a href="https://www.linkedin.com/in/evangelia-augoust-928a2426a/" target="_blank"><img src="/portfolio/00_assets/svgs/lk.png" id="up2" alt="connect with me at linkedin"></a>
+            <a href="https://www.behance.net/evangeliaa" target="_blank"><img src="/test2/00_assets/svgs/behance.png" id="up1" alt="connect with me at behance"></a>
+            <a href="https://www.linkedin.com/in/evangelia-augoust-928a2426a/" target="_blank"><img src="/test2/00_assets/svgs/lk.png" id="up2" alt="connect with me at linkedin"></a>
         </div>
         <br/>
         <small id="cr">&copy; 2025. All rights reserved to Evangelia Avgoustopoulou</small>

@@ -4,6 +4,8 @@
 //     }
 // });
 
+
+
 let info = document.querySelector("#info");
 let joyce = document.querySelector("#joyce");
 const navbar = document.querySelector("nav");
@@ -21,7 +23,7 @@ function mobileExpand(){
         clearTimeout(span);
     }else{
         mobNavbar.style.animation = "close 1s forwards";
-        mobIcon.innerHTML = "<img src=\"./00_assets/svgs/hmg.svg\" width=\"60vh\" height=\"60vh\">"
+        mobIcon.innerHTML = "<img src=\"./00_assets/svgs/open.svg\" width=\"60vh\" height=\"60vh\">"
         tick = false;
         span = setTimeout(() => {
             mobNavbar.style.display = "none";
@@ -104,14 +106,16 @@ introElement.style.visibility = "visible";
 
 // Πρώτο animation για "Hi!👋"
 function typeIntroPart1() {
+    introElement.innerHTML = "Hi! <span id='waveEmoji' style='opacity: 0;'>👋</span>";
     let interval = setInterval(() => {
-        if (introLetter < introPart1.length) { 
-            introElement.innerHTML += introPart1[introLetter];
+        if (introLetter < 3) { // Μόνο τα γράμματα "Hi!" πληκτρολογούνται
+            introElement.innerHTML = introPart1.slice(0, introLetter + 1) + " <span id='waveEmoji' style='opacity: 0;'>👋</span>";
             introLetter++;
         } else {
             clearInterval(interval);
-            introLetter = 0;
-            setTimeout(() => typeIntroPart2(partIndex), 1000); // Ξεκινάμε το επόμενο μέρος
+            document.getElementById("waveEmoji").style.opacity = 1; // Εμφάνιση του emoji μετά το Hi!
+            introElement.innerHTML += "<br>";
+            setTimeout(() => typeIntroPart2(partIndex), 1000);
         }
     }, introSpeed);
 }
@@ -135,5 +139,5 @@ function typeIntroPart2(index) {
     }, introSpeed);
 }
 
-// Ξεκινάμε το animation μόλις φορτώσει η σελίδα
-window.addEventListener("load", typeIntroPart1);
+// Το animation θα ξεκινήσει 1 δευτερόλεπτο μετά το πρώτο render της σελίδας
+setTimeout(typeIntroPart1, 1000);

@@ -2,7 +2,6 @@ html, body {
     max-width: 100%;
     overflow-x: hidden;
 }
-
 html{
     scroll-behavior: smooth;
 }
@@ -22,7 +21,7 @@ a, li{
 }
 ::selection {
     color: white;
-    background: #C33948;
+    background: #2C4A60;
 }
 
 /*NAVBAR*/
@@ -35,7 +34,7 @@ nav{
     justify-content: space-between;
     align-items: center;
     z-index: 100;
-    background-color: #c33949fa;
+    background-color: #2C4A60;
     color: white;
 }
 #me_index{
@@ -197,7 +196,7 @@ ul {
 }
 
 .goTo:hover, #top:hover {
-    color: #C33948;
+    color: #0951A4;
 }
 
 /* show n tell*/
@@ -292,7 +291,7 @@ span.subhead{
     color: black;
 }
 #checked, .check:hover, .more:hover #checked:hover{
-    color:#C33948;
+    color:#0951A4;
 }
 
 .elink{
@@ -323,7 +322,7 @@ span.subhead{
 
 /* footer */
 footer{
-    background-color: #C33948;
+    background-color: #2C4A60;
     color: white;
     font-family: "Work Sans", "serif";
     height: fit-content;

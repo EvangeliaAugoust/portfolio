@@ -9,9 +9,8 @@ body{
     overflow-x: hidden;
     font-weight: 400;
     margin: 0;
-
     height: fit-content;
-    background-image: url(../00_assets/svgs/temp.svg);
+    background-image: url(../00_assets/svgs/bp.png);
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -22,7 +21,7 @@ a, li{
 }
 ::selection {
     color: white;
-    background: #C33948;
+    background: #3A5A40;
 }
 
 /*NAVBAR*/
@@ -34,8 +33,17 @@ nav{
     justify-content: space-between;
     align-items: center;
     z-index: 100;
-    background-color: #c33949fa;
+    background-color: #3A5A40;
     color: white;
+}
+#redRectangle {
+    width: 80%;
+    height: 6vh; /* Ρύθμισε το ύψος αν χρειάζεται */
+    background: linear-gradient(to right, #9198e500 40%, #3A5A40 80%);
+    position: absolute;
+    bottom: 5vh;
+    right: 0;
+    z-index: 99;
 }
 #me_index{
     filter: brightness(0) saturate(100%) invert(100%) sepia(9%) saturate(7498%) hue-rotate(180deg) brightness(104%) contrast(116%);
@@ -78,7 +86,7 @@ nav{
     z-index: -1;
     padding-top: 200px;
     display: none;
-    background-color: #C33948;
+    background-color: #3A5A40;
 }
 .mobNav a{
     width: 30vh;
@@ -141,6 +149,16 @@ nav{
     align-items: center;
 }
 
+#introText {
+    text-align: center; /* Διατηρεί τη στοίχιση στο κέντρο */
+    width: 110%; /* Ρυθμίζουμε το πλάτος ώστε να ταιριάζει στο τελικό κείμενο */
+    margin: 10 auto; /* Κεντράρει οριζόντια το μπλοκ του κειμένου */
+    display: block; /* Επιτρέπει το margin να δουλέψει σωστά */
+    white-space: nowrap; /* Αποτρέπει το αυτόματο σπάσιμο γραμμής */
+    overflow-wrap: break-word; /* Για να σπάει σωστά αν χρειάζεται */
+    visibility: hidden; /* Αρχικά κρύβουμε το κείμενο και το εμφανίζουμε με το JS */
+}
+
 /*
 @keyframes swayBackground {
     0% { background-position: 0% 0%; }
@@ -153,14 +171,13 @@ nav{
     height: 100%;
     padding-left: 2%;
     padding-right: 2%;
-    background-image: url(../00_assets/svgs/10.svg);
+    background-image: url(../00_assets/svgs/bf.png);
     background-size: cover;
     background-repeat: no-repeat;
     transition: .3s ease;
-    background-color: rgb(253, 231, 231);
+    background-color: #E3DED8;
     animation: swayBackground 3s ease-in-out infinite;
 }
-
 
 .datWho{
     text-align: center;
@@ -174,10 +191,16 @@ nav{
     align-items: flex-end;
     justify-content: center;
 }
-#jz{
+#ea{
     font-family: "Marcellus SC", serif;
     font-size: 4em;
     margin: 0px;
+}
+.firstName, .lastName {
+    display: block;
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: inherit;
 }
 #meet h1, #followUp{
     font-weight: 500;
@@ -282,7 +305,7 @@ nav{
 
 /* footer */
 footer{
-    background-color: #C33948;
+    background-color: #3A5A40;
     color: white;
     font-family: "Work Sans", "serif";
     height: fit-content;
@@ -359,18 +382,41 @@ footer{
 }
 
 
-/* responsive design */
-@media screen and (max-width: 1270px){
-    #more{
+@media screen and (max-width: 1270px),
+       screen and (min-width: 1410px),
+       screen and (width: 1536px),
+       screen and (max-width: 1690px) {
+    #more {
         text-align: center;
+        margin-top: -15px; /* Μειώνει το κενό ανεβάζοντας το κείμενο πιο κοντά στο όνομα */
+    }
+    .whoImg {
+        width: 46%;
+        margin-left: auto;
+        margin-right: auto;
+        display: block; /* Εξασφαλίζει ότι το margin εφαρμόζεται σωστά */
     }
 }
+
+@media screen and (max-width: 1690px) {
+    #ea {
+        font-size: 3.5em; /* Μικραίνει το μέγεθος του ονόματος */
+    }
+    .firstName, .lastName {
+        font-size: inherit; /* Κρατάει τις αναλογίες */
+    }
+    #introText {
+        font-size: 0.9em; /* Μικραίνει ελαφρώς το μέγεθος του κειμένου */
+    }
+}
+
+
 @media screen and (max-width:858px){
     .intro{
         flex-direction: column;
-        height: 137vh;
+        height: 136vh;
     }
-    #jz{
+    #ea{
         font-size: 2.6em;
     }
     .whoImg, .whoDat{
@@ -443,24 +489,9 @@ footer{
 
 }
 
-#introText {
-    text-align: center; /* Διατηρεί τη στοίχιση στο κέντρο */
-    width: 110%; /* Ρυθμίζουμε το πλάτος ώστε να ταιριάζει στο τελικό κείμενο */
-    margin: 10 auto; /* Κεντράρει οριζόντια το μπλοκ του κειμένου */
-    display: block; /* Επιτρέπει το margin να δουλέψει σωστά */
-    white-space: pre-line; /* Διατηρεί τα line breaks που προσθέτουμε */
-    visibility: hidden; /* Αρχικά κρύβουμε το κείμενο και το εμφανίζουμε με το JS */
-}
 
-#redRectangle {
-    width: 90%;
-    height: 6vh; /* Ρύθμισε το ύψος αν χρειάζεται */
-    background: linear-gradient(to right, #9198e500 40%, #C33948 80%);
-    position: absolute;
-    bottom: 5vh;
-    right: 0;
-    z-index: 99;
-}
+
+
 
 
 

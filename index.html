@@ -11,6 +11,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Marcellus+SC&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Preload and force-load background images early -->
+    <link rel="preload" as="image" href="../00_assets/me/home.jpg">
+    <link rel="preload" as="image" href="../00_assets/svgs/bf.png">
+    <link rel="preload" as="image" href="../00_assets/svgs/bp.png">
+    <img src="../00_assets/svgs/bf.png" style="display: none;" loading="eager">
+    <img src="../00_assets/me/home.jpg" style="display: none;" loading="eager">
+    <img src="../00_assets/svgs/bp.png" style="display: none;" loading="eager">
+    <link rel="preload" as="image" href="./00_assets/projects/cases/covers/ticmobile.jpg">
+    <link rel="preload" as="image" href="./00_assets/projects/cases/covers/ticwebsite.jpg">
+    <link rel="preload" as="image" href="./00_assets/projects/cases/covers/skyscanner.jpg">
 </head>
 <body>
 
@@ -18,15 +28,15 @@
         <a href=""><img draggable="false" src="./00_assets/svgs/icon.png" id="me_index" width="55px"></a>
         <div class="web">            
             <a href="#" id="active">Work</a>
-            <a href="/portfolio/02_cases/index.html">About</a>
-            <a href="/portfolio/00_assets/me/Evangelia Avgoustopoulou UX Resume.pdf" target="_blank">Resumé</a>            
+            <a href="/test2/02_cases/index.html">About</a>
+            <a href="/test2/00_assets/me/Evangelia Avgoustopoulou UX Resume.pdf" target="_blank">Resume</a>            
         </div>
         <div class="mob">
-            <div id="mobIcon"><img src="./00_assets/svgs/hmg.svg" width="60vh" height="60vh"></div>
+            <div id="mobIcon"><img src="./00_assets/svgs/open.svg" width="60vh" height="60vh"></div>
             <ul class="mobNav">
                 <a href="#" id="mobActive"><li>Work</li></a>
-                <a href="/portfolio/02_cases/index.html">About</a>
-                <a href="/portfolio/00_assets/me/Evangelia Avgoustopoulou UX Resume.pdf" target="_blank">Resumé</a>                
+                <a href="/test2/02_cases/index.html">About</a>
+                <a href="/test2/00_assets/me/Evangelia Avgoustopoulou UX Resume.pdf" target="_blank">Resume</a>                
             </ul>
         </div>
     </nav>        
@@ -34,7 +44,10 @@
     <div class="intro">
         <div class="whoDat">
             <div class="datWho" id="meet">
-                <h1 id="jz">Evangelia Avgoustopoulou</h1>
+                <h1 id="ea">
+                    <span class="firstName">Evangelia</span>
+                    <span class="lastName">Avgoustopoulou</span>
+                </h1>
             </div>
             <div class="datWho" id="more">
                 <p id="introText"></p>
@@ -47,25 +60,25 @@
     </div>
 
     <div class="caseStudies">
-        <h1>Projects🌠</h1>
+        <h1>Projects🚀</h1>
         <div class="row">
             <a href="./01_work/01_workDetails/ticmobile.html">
                 <div class="case">
-                    <img draggable="false" src="./00_assets/projects/cases/covers/ticmobile.png" class="caseCover">
+                    <img draggable="false" src="./00_assets/projects/cases/covers/ticmobile.jpg" class="caseCover">
                     <p class="caseTitle">TicketFlix Mobile App // October 2024</p>
                     <p class="viewImage"><span class="coverSymb">&#10148;</span></p>
                 </div>
             </a>
             <a href="./01_work/01_workDetails/ticwebsite.html">
                 <div class="case">
-                    <img draggable="false" src="./00_assets/projects/cases/covers/ticwebsite.png" class="caseCover">
+                    <img draggable="false" src="./00_assets/projects/cases/covers/ticwebsite.jpg" class="caseCover">
                     <p class="caseTitle">TicketFlix Website // November 2024</p>
                     <p class="viewImage"><span class="coverSymb">&#10148;</span></p>
                 </div>
             </a>
             <a href="./01_work/01_workDetails/skyscanner.html">
                 <div class="case">
-                    <img draggable="false" src="./00_assets/projects/cases/covers/skyscanner.png" class="caseCover">
+                    <img draggable="false" src="./00_assets/projects/cases/covers/skyscanner.jpg" class="caseCover">
                     <p class="caseTitle">Skyscanner App Redesign // February 2025</p>
                     <p class="viewImage"><span class="coverSymb">&#10148;</span></p>
                 </div>

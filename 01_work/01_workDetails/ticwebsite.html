@@ -12,6 +12,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Marcellus+SC&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- Hide Code on the web -->
+    <script>
+        document.addEventListener("contextmenu", (event) => event.preventDefault()); // Απενεργοποιεί το δεξί κλικ
+        document.addEventListener("keydown", (event) => {
+            if (event.key === "F12" || 
+                (event.ctrlKey && event.shiftKey && event.key === "I") || // Ctrl + Shift + I
+                (event.ctrlKey && event.key === "U")) { // Ctrl + U
+                event.preventDefault(); } });
+    </script>  
 </head>
 <body>
 
@@ -20,14 +30,14 @@
         <div class="web">            
             <a href="../../index.html">Work</a>
             <a href="../../02_cases/index.html">About</a>
-            <a href="../../00_assets/me/Evangelia Avgoustopoulou UX Resume.pdf" target="_blank">Resumé</a>
+            <a href="../../00_assets/me/Evangelia Avgoustopoulou UX Resume.pdf" target="_blank">Resume</a>
         </div>
         <div class="mob">
             <div id="mobIcon"><img src="../../00_assets/svgs/hmg.svg" width="60vh" height="60vh"></div>
             <ul class="mobNav">
                 <a href="../../index.html"><li>Work</li></a>
                 <a href="../../02_cases/index.html"><li >About</li></a>
-                <a href="../00_assets/me/Evangelia Avgoustopoulou UX Resume.pdf" target="_blank"><li>Resumé</li></a>
+                <a href="../00_assets/me/Evangelia Avgoustopoulou UX Resume.pdf" target="_blank"><li>Resume</li></a>
             </ul>
         </div>
     </nav>        

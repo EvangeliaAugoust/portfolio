@@ -136,3 +136,20 @@ $(".viewing").click(() => {
     $('body').css('overflowY', 'auto');
     $(".viewing").css("display", "none");
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    const lazyImages = document.querySelectorAll(".lazy-load"); 
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                img.src = img.dataset.src; // Βάζουμε το σωστό src
+                img.classList.remove("lazy-load"); // Αφαιρούμε την κλάση
+                observer.unobserve(img); // Δεν το παρακολουθούμε άλλο
+            }
+        });
+    }, { rootMargin: "200px" }); // Ξεκινάει να φορτώνει 200px πριν εμφανιστεί
+
+    lazyImages.forEach(img => observer.observe(img));
+});

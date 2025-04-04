@@ -71,46 +71,48 @@ labels.forEach(label => {
 
 
 // ΖΟΥΜ ΚΑΘΕ ΕΙΚΟΝΑΣ
-const processImg = $(".show").map(function(){return $(this).attr("src");}).get();
+const processImg = $(".show").map(function () {
+    return $(this).attr("src") || $(this).attr("data-src"); // Παίρνει το src αν υπάρχει, αλλιώς το data-src
+}).get();
 
-$('.show').click(function() {
+$('.show').click(function () {
     $('body').css('overflowY', 'hidden');
     $(".viewing").css("display", "flex");
 
     let imgIndex = $(".show").index(this);
-    let imgSrc = processImg[imgIndex];
+    let imgSrc = $(this).attr("src") || $(this).attr("data-src"); // Παίρνει το σωστό URL της εικόνας
     let zoomImg = $("#zoom");
 
     // Προεπιλεγμένες τιμές
     let width = "auto";
     let height = "auto";
-    let maxWidth = "85vw"; 
-    let maxHeight = "85vh"; 
+    let maxWidth = "85vw";
+    let maxHeight = "85vh";
     let borderRadius = "0px";
 
     // ΝΕΟ: Έλεγχος για την κλάση "zoomable"
     if ($(this).hasClass("zoomable")) {
-        maxWidth = "100vw"; // Μπορείς να αλλάξεις τις τιμές για το zoom όταν η εικόνα έχει την κλάση zoomable
+        maxWidth = "100vw";
         maxHeight = "100vh";
-    }    
+    }
 
     if ($(this).hasClass("paper")) {
-        maxWidth = "100vw"; // Μπορείς να αλλάξεις τις τιμές για το zoom όταν η εικόνα έχει την κλάση zoomable
+        maxWidth = "100vw";
         maxHeight = "100vh";
     }
 
     if ($(this).hasClass("digital")) {
-        maxWidth = "102vw";  // Αύξηση του πλάτους κατά το zoom
-        maxHeight = "128vh"; // Αύξηση του ύψους αλλά με περιορισμό
+        maxWidth = "102vw";
+        maxHeight = "128vh";
     }
 
     if ($(this).hasClass("hd")) {
-        maxWidth = "100vw"; // Μπορείς να αλλάξεις τις τιμές για το zoom όταν η εικόνα έχει την κλάση zoomable
+        maxWidth = "100vw";
         maxHeight = "100vh";
     }
 
     if ($(this).hasClass("hp")) {
-        maxWidth = "100vw"; // Μπορείς να αλλάξεις τις τιμές για το zoom όταν η εικόνα έχει την κλάση zoomable
+        maxWidth = "100vw";
         maxHeight = "100vh";
     }
 
@@ -118,7 +120,7 @@ $('.show').click(function() {
         maxWidth = "100vw";
         maxHeight = "100vh";
     }
-    
+
     // Εφαρμογή των ρυθμίσεων
     zoomImg.css({
         "width": width,

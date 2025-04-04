@@ -159,7 +159,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 observer.unobserve(img); // Δεν το παρακολουθούμε άλλο
             }
         });
-    }, { rootMargin: "500px" }); // Ξεκινάει να φορτώνει 200px πριν εμφανιστεί
+    }, { rootMargin: "800px" }); // Ξεκινάει να φορτώνει 200px πριν εμφανιστεί
 
     lazyImages.forEach(img => observer.observe(img));
 });

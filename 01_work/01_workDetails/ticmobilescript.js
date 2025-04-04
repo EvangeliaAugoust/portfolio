@@ -38,15 +38,16 @@ chat();
 
 // ΖΟΥΜ ΚΑΘΕ ΕΙΚΟΝΑΣ
 const processImg = $(".show").map(function () {
-    return $(this).attr("src");
+    return $(this).attr("src") || $(this).attr("data-src");
 }).get();
+
 
 $('.show').click(function () {
     $('body').css('overflowY', 'hidden');
     $(".viewing").css("display", "flex");
 
     let imgIndex = $(".show").index(this);
-    let imgSrc = processImg[imgIndex];
+    let imgSrc = $(this).attr("src") || $(this).attr("data-src");
     let zoomImg = $("#zoom");
 
     // Προεπιλεγμένες τιμές
@@ -142,3 +143,21 @@ labels.forEach(label => {
     observer.observe(label); // Παρακολουθούμε το κάθε label
 });
 
+
+//Lazy Loading (Αναβλητική Φόρτωση)
+document.addEventListener("DOMContentLoaded", function() {
+    const lazyImages = document.querySelectorAll(".lazy-load"); 
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                img.src = img.dataset.src; // Βάζουμε το σωστό src
+                img.classList.remove("lazy-load"); // Αφαιρούμε την κλάση
+                observer.unobserve(img); // Δεν το παρακολουθούμε άλλο
+            }
+        });
+    }, { rootMargin: "500px" }); // Ξεκινάει να φορτώνει 200px πριν εμφανιστεί
+
+    lazyImages.forEach(img => observer.observe(img));
+});

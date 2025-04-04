@@ -139,6 +139,8 @@ $(".viewing").click(() => {
     $(".viewing").css("display", "none");
 });
 
+
+//Lazy Loading (Αναβλητική Φόρτωση)
 document.addEventListener("DOMContentLoaded", function() {
     const lazyImages = document.querySelectorAll(".lazy-load"); 
 
@@ -151,7 +153,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 observer.unobserve(img); // Δεν το παρακολουθούμε άλλο
             }
         });
-    }, { rootMargin: "200px" }); // Ξεκινάει να φορτώνει 200px πριν εμφανιστεί
+    }, { rootMargin: "500px" }); // Ξεκινάει να φορτώνει 200px πριν εμφανιστεί
 
     lazyImages.forEach(img => observer.observe(img));
 });

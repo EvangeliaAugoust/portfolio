@@ -71,14 +71,16 @@ labels.forEach(label => {
 
 
 // ΖΟΥΜ ΚΑΘΕ ΕΙΚΟΝΑΣ
-const processImg = $(".show").map(function(){return $(this).attr("src");}).get();
+const processImg = $(".show").map(function () {
+    return $(this).attr("src") || $(this).attr("data-src");
+}).get();
 
 $('.show').click(function() {
     $('body').css('overflowY', 'hidden');
     $(".viewing").css("display", "flex");
 
     let imgIndex = $(".show").index(this);
-    let imgSrc = processImg[imgIndex];
+    let imgSrc = $(this).attr("src") || $(this).attr("data-src");
     let zoomImg = $("#zoom");
 
     // Προεπιλεγμένες τιμές

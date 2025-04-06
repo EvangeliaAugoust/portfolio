@@ -425,7 +425,7 @@ footer{
     }
     .whoDat{
         padding: 0px;
-        background-image: url(../00_assets/svgs/tablet.svg);
+        background-image: url(../00_assets/svgs/tablet.png);
     }
     .whoImg{
         height: 100vh;
@@ -439,6 +439,9 @@ footer{
         padding-top: 10%;
         padding-bottom: 0%;
     }
+    #me_index{
+        width : 45px;
+    }
     #cr{
         text-align: center;
     }
@@ -448,26 +451,58 @@ footer{
     #redRectangle {
         display: none;
     }
+    #cr {
+        text-align: right;
+        display: block;
+        padding-right: 3vw; /* Μικρότερο padding = πιο δεξιά */
+        font-size: 0.85em;
+    }    
 }
 @media screen and (max-width: 600px){
     #meet{
         height: 30%;
-    }
-    #more{
-        font-size: 1.1em;
     }
     .follow{
         width: 30%;
     }
     .whoDat{
         padding-top: 20%;
-        background-image: url(../00_assets/svgs/m3.svg);
+        background-image: url(../00_assets/svgs/mb.png);
         background-size: cover;
         height: 50vh;
+    }
+    body {
+        background-image: url(../00_assets/svgs/mbp.png); /* Νέο background για mobile */
     }
     #redRectangle {
         display: none;
     }
+    #introText {
+        font-size: 1.2em !important;
+        white-space: normal;
+        width: 100%;
+        margin: 0 auto;
+        line-height: 1.8em;
+        padding: 0 10px;
+    }
+    #more {
+        font-size: 1em;
+        margin-top: 20px; /* Προσθέτει κενό ανάμεσα στο επίθετο και το animation */
+    }
+
+    .firstName {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .lastName {
+        display: block;
+    }
+    .introLine {
+        display: block;
+        margin-bottom: 3px; /* Κενό ανάμεσα στις προτάσεις */
+    }
+    
 }
 @media screen and (max-width: 425px){
     .whoDat{

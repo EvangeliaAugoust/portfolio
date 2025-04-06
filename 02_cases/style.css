@@ -527,9 +527,11 @@ footer ::selection {
   }*/
   
 
-/* Smaller */
+/* tablet */
 @media only screen and (max-width:858px){
-    /* top */
+    .topContainer {
+        background-image: url(../00_assets/svgs/pt.png);
+    }
     .topContainer{
         flex-direction: column-reverse;
         background-position: center;
@@ -559,6 +561,34 @@ footer ::selection {
     }
     .projectLeft:hover .projectImg, .projectRight:hover .projectImg{
         transform: scale(101%);
+    }
+    .projectLeft {
+        padding: 0 15px;
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .projectDetails {
+        padding-left: 0; /* Αφαιρούμε μόνο το αριστερό padding */
+        padding-right: 0; /* Αφαιρούμε μόνο το δεξί padding */
+    }
+
+    .imageGrid {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* 2 εικόνες σε κάθε σειρά */
+        gap: 10px;
+    }
+
+    .projectBrief p {
+        font-size: 1em;
+        line-height: 1.6em;
+    }
+
+    .contact {
+        display: flex;
+        align-items: center;
+        gap: 8px;
     }
 }
 
@@ -590,6 +620,51 @@ footer ::selection {
         text-decoration: underline;
         text-decoration-color: #5f9eb0;
         text-underline-offset: 3px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .topContainer {
+        background-image: url(../00_assets/svgs/pmb.png);
+    }
+
+    .projectLeft {
+        padding: 0 15px;
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .projectView,
+    .projectDetails {
+        width: 100%;
+    }
+
+    .projectDetails {
+        padding-left: 0; /* Αφαιρούμε μόνο το αριστερό padding */
+        padding-right: 0; /* Αφαιρούμε μόνο το δεξί padding */
+    }
+
+    .gridImg {
+        width: 100%; /* Να γεμίζει σωστά */
+        height: auto;
+    }
+
+    .imageGrid {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* 2 εικόνες σε κάθε σειρά */
+        gap: 10px;
+    }
+
+    .projectBrief p {
+        font-size: 1em;
+        line-height: 1.6em;
+    }
+
+    .contact {
+        display: flex;
+        align-items: center;
+        gap: 8px;
     }
 }
 

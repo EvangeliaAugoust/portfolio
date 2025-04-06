@@ -106,6 +106,7 @@ let whoIAmInterval = null; // Για να ακυρώνουμε το animation α
 // Δημιουργούμε το στοιχείο εικόνας (avatar)
 const avatarImg = document.createElement("img");
 avatarImg.src = "../00_assets/me/avatar.png";
+avatarImg.id = "avatarImg"; // New
 avatarImg.style.width = "65px";
 avatarImg.style.verticalAlign = "middle";
 avatarImg.style.marginLeft = "10px";
@@ -166,11 +167,27 @@ const observer = new IntersectionObserver(entries => {
 observer.observe(whoIAmElement);
 
 // Responsive avatar size
+/* Πριν τις ρυθμίσεις tablet and mobile I had this
 function adjustAvatarSize() {
     if (window.innerWidth <= 1270) {
         avatarImg.style.width = "52px";
     } else {
         avatarImg.style.width = "65px";
+    }
+}
+και χωρίς το avatarImg.id = "avatarImg"; στο const avatarImg = document.createElement("img");
+*/
+function adjustAvatarSize() {
+    const avatarImg = document.getElementById("avatarImg"); // βεβαιώσου ότι έχεις αυτό το ID στο HTML
+
+    if (window.innerWidth <= 600) {
+        avatarImg.style.display = "none"; // Κρύβει το avatar εντελώς σε mobile
+    } else if (window.innerWidth <= 860) {
+        avatarImg.style.display = "inline-block"; // Το avatar εμφανίζεται
+        avatarImg.style.width = "32px"; // Ελαφρώς μεγαλύτερο για οθόνες 860px
+    } else {
+        avatarImg.style.display = "inline-block"; // Το avatar εμφανίζεται
+        avatarImg.style.width = window.innerWidth <= 1270 ? "52px" : "65px"; // Κανονικό μέγεθος για μεγαλύτερες οθόνες
     }
 }
 window.addEventListener("load", adjustAvatarSize);

@@ -626,6 +626,10 @@ footer ::selection {
 @media screen and (max-width: 600px) {
     .topContainer {
         background-image: url(../00_assets/svgs/pmb.png);
+        background-attachment: scroll; /* ή απλά αφαίρεσέ το */
+        background-size: cover; /* κάνει την εικόνα να γεμίζει πλήρως */
+        background-position: center center; /* φροντίζει να κόβεται ωραία */
+        background-repeat: no-repeat;
     }
 
     .projectLeft {

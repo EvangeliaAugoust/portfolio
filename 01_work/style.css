@@ -471,6 +471,13 @@ footer{
         background-size: cover;
         height: 50vh;
     }
+    html {
+        background-image: url(../00_assets/svgs/mbp.png);
+        background-attachment: scroll;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
     body {
         background-image: url(../00_assets/svgs/mbp.png); /* Νέο background για mobile */
     }

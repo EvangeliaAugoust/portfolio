@@ -232,22 +232,50 @@ ul {
     padding-left: 20px;
 }
 
-.viewing{
+/*.viewing {
+    overflow-y: auto; // Επιτρέπει scroll για να βλέπει όλη την εικόνα
+}*/
+
+.viewing {
     position: fixed;
+    top: 0;
+    left: 0;
     height: 100vh;
     width: 100vw;
-    bottom: 0;
-    left: 0;
-    background-color: #1d1d1dab;
+    background-color: rgba(29, 29, 29, 0.8);
     z-index: 101;
     cursor: zoom-out;
-    display: flex;
-    justify-content: center;
     display: none;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* default: no scroll unless needed */
 }
-#zoom{
-    align-self: center;
+
+.viewing img {
+    transition: transform 0.2s ease;
+    will-change: transform;
+    cursor: grab;
+    user-select: none;
+}
+.viewing img:active {
+    cursor: grabbing;
+}
+
+#zoom {
     width: 85vw;
+    max-width: unset;
+    max-height: unset;
+    transform: translate(0px, 0px) scale(1);
+    transition: transform 0.2s ease;
+    will-change: transform;
+    user-select: none;
+    pointer-events: all;
+    cursor: grab;
+    align-self: flex-start; /* αλλάζει σε flex-start όταν χρειαστεί */
+}
+
+#zoom:active {
+    cursor: grabbing;
 }
 
 .show{
@@ -490,18 +518,6 @@ footer{
     max-height: 530px; /* Προαιρετικό όριο ύψους 
 }
 */
-
-.viewing {
-    display: none; /* Κρύβει το viewing αρχικά */
-    justify-content: center;
-    overflow-y: auto; /* Επιτρέπει scroll για να βλέπει όλη την εικόνα */
-    height: 100vh; /* Ύψος όσο η οθόνη */
-}
-
-#zoom {
-
-    align-self: flex-start; /* Βάζει την εικόνα στην κορυφή */
-}
 
 body {
     cursor: default; /* Απενεργοποιεί το zoom cursor όταν δεν έχει επιλεγεί εικόνα */
